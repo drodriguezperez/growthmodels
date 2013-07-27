@@ -13,3 +13,5 @@ Collate:
     'negativeExponential.R'
     'monomolecular.R'
     'mitcherlich.R'
+    'gompertz.R'
+    'logistic.R'

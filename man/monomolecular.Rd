@@ -20,8 +20,4 @@
 \examples{
 growth <- monomolecular(0:10, 10, 0.5, 0.3)
 }
-\references{
-  [1] George A. F. Seber and C. J. Wild, "Nonlinear
-  Regression", John Wiley & Sons, 2003
-}
 

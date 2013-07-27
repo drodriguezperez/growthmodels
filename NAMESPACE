@@ -1,3 +1,5 @@
+export(gompertz)
+export(logistic)
 export(mitcherlich)
 export(monomolecular)
 export(negativeExponential)

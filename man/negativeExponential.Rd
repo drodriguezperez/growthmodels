@@ -18,8 +18,4 @@
 \examples{
 growth <- negativeExponential(0:10, 1, .3)
 }
-\references{
-  [1] M.S. Philip, "Measuring trees and forests". 2nd
-  edition.  CAB International, 1994
-}
 

@@ -1,5 +1,5 @@
 ##
-##  Mitcherlich exponential growth model
+##  Logistic exponential growth model
 ##
 ##  Created by Daniel Rodríguez Pérez on 27/7/2013.
 ##
@@ -19,25 +19,25 @@
 ##  along with this program.  If not, see <http://www.gnu.org/licenses/>
 ##
 
-#' Mitcherlich growth model
+#' Logistic growth model
 #'
-#' Computes the Mitcherlich growth model
-#' \deqn{ y(t) = (\alpha - \beta k^t)}
+#' Computes the Logistic growth model
+#' \deqn{ y(t) = \frac{\alpha}{1 + \beta exp(-k t)}}
 #' 
 #' @param t time
 #' @param alpha upper asymptote
 #' @param beta growth range 
 #' @param k growth rate 
 #' 
-#' @usage mitcherlich(t, alpha, beta, k)
+#' @usage logistic(t, alpha, beta, k)
 #' 
 #' @examples
-#' growth <- mitcherlich(0:10, 10, 0.5, 0.3)
+#' growth <- logistic(0:10, 10, 0.5, 0.3)
 #' 
-#' @rdname mitcherlich
-#' @export mitcherlich
-#' @aliases mitcherlich
-mitcherlich <- function(t, alpha, beta, k) {
-  result <- alpha - beta * k^t
+#' @rdname logistic
+#' @export logistic
+#' @aliases logistic
+logistic <- function(t, alpha, beta, k) {
+  result <- alpha / (1 + beta * exp(-k * t))
   return(result)
 }

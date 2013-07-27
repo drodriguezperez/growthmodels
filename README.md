@@ -9,6 +9,7 @@ You can install `growth` from `github` using the `devtools` package
 ```
 require(devtools)
 install_github('growth', 'drodriguezperez')
+```
 
 ## Features
 
