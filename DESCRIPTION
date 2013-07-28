@@ -15,3 +15,8 @@ Collate:
     'mitcherlich.R'
     'gompertz.R'
     'logistic.R'
+    'chapmanRichards.R'
+    'vanclay.R'
+    'richard.R'
+    'vonBertalanffy.R'
+    'weibull.R'
