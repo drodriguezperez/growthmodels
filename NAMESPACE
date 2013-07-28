@@ -1,4 +1,6 @@
 export(chapmanRichards)
+export(generalisedLogistic)
+export(generalisedRichard)
 export(gompertz)
 export(logistic)
 export(mitcherlich)

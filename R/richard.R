@@ -43,3 +43,29 @@ richard <- function(t, alpha, beta, k, m) {
   result <- alpha / result;
   return(result)
 }
+
+#' Generalised Richard growth model
+#' 
+#' Computes the Generalised Richard growth model
+#' \deqn{ y(t) = A + \frac{U - A}{(1 + \beta exp(-k * (t - t_0)))^(1/m)} }
+#' 
+#' @param t time
+#' @param A the lower asymptote
+#' @param U the upper asymptote
+#' @param k growth range
+#' @param m slope of growth 
+#' @param beta growth range
+#' @param t0 time shift
+#' 
+#' @usage generalisedRichard(t, A, U, k, m, beta, t0)
+#' 
+#' @examples
+#' growth <- generalisedRichard(0:10, 5, 10, 0.3, 0.5, 1, 3)
+#' 
+#' @rdname generalisedRichard
+#' @export generalisedRichard
+#' @aliases generalisedRichard
+generalisedRichard <- function(t, A, U, k, m, beta, t0) {
+  result <- A + richard(t - t0, U - A, beta, k, m)
+  return(result)
+}

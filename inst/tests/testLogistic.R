@@ -41,3 +41,22 @@ test_that("Logistic growth model values", {
   expect_that(logistic(time, parameters[1], parameters[2], parameters[3]),
               equals(expected, tolerance = MAXERROR))
 })
+
+test_that("Generalised Logistic growth model values", {
+  expected   <- c(1.000045e+000, 1.000553e+000, 1.006715e+000, 1.078849e+000,
+                  1.666667e+000, 2.717962e+000, 2.973407e+000, 2.997790e+000,
+                  2.999818e+000)
+  parameters <- c(1, 3, 5, 2, 0)
+  time       <- c(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0)
+  
+  expect_that(generalisedLogistic(time, parameters[1], parameters[2], parameters[3], parameters[4], parameters[5]),
+              equals(expected, tolerance = MAXERROR))
+  
+  expected   <- c(1.200000e+001, 1.199998e+001, 1.199980e+001, 1.199751e+001,
+                  1.196978e+001, 1.164518e+001, 9, 4.269170e+000, 3.119670e+000)
+  parameters <- c(12, 3, 5, 2, 1)
+  time       <- c(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0)
+  
+  expect_that(generalisedLogistic(time, parameters[1], parameters[2], parameters[3], parameters[4], parameters[5]),
+              equals(expected, tolerance = MAXERROR))
+})

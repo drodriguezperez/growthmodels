@@ -41,3 +41,27 @@ logistic <- function(t, alpha, beta, k) {
   result <- alpha / (1 + beta * exp(-k * t))
   return(result)
 }
+
+#' Generalised Logistic growth model
+#' 
+#' Computes the Generalised Logistic growth model
+#' \deqn{ y(t) = A + \frac{U - A}{1 + \beta exp(-k (t- t_0))}}
+#' 
+#' @param t time
+#' @param A the lower asymptote
+#' @param U the upper asymptote
+#' @param k growth range
+#' @param beta growth range
+#' @param t0 time shift
+#' 
+#' @usage generalisedLogistic(t, A, U, k, beta, t0)
+#' 
+#' @examples
+#' growth <- generalisedLogistic(0:10, 5, 10, 0.3, 0.5, 3)
+#' 
+#' @rdname generalisedLogistic
+#' @export generalisedLogistic
+#' @aliases generalisedLogistic
+generalisedLogistic <- function(t, A, U, k, beta, t0) {
+  result <- A + logistic(t - t0, U - A, beta, k);
+}
