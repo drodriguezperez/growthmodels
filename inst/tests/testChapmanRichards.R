@@ -19,7 +19,6 @@
 ##  along with this program.  If not, see <http://www.gnu.org/licenses/>
 ##
 
-
 context("Chapman-Richards growth model")
 
 MAXERROR <- 1e-6
