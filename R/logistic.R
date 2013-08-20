@@ -61,6 +61,11 @@ logistic <- function(t, alpha, beta, k) {
 #' 
 #' @usage generalisedLogistic(t, A, U, k, beta, t0)
 #' 
+#' @references
+#' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
+#' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
+#' 327-336, 1999.
+#' 
 #' @examples
 #' growth <- generalisedLogistic(0:10, 5, 10, 0.3, 0.5, 3)
 #' 

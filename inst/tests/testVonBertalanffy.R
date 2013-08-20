@@ -1,5 +1,5 @@
 ##
-##  Tests for the VonBertalanffy growth model
+##  Tests for the von Bertalanffy growth model
 ##
 ##  Created by Daniel Rodríguez Pérez on 28/7/2013.
 ##
@@ -19,24 +19,38 @@
 ##  along with this program.  If not, see <http://www.gnu.org/licenses/>
 ##
 
-context("VonBertalanffy growth model")
+
+context("von Bertalanffy growth model")
 
 MAXERROR <- 1e-6
 
-test_that("VonBertalanffy growth model values", {
-  expected   <- c(1.777217e+009, 1.991384e+007, 2.298576e+005, 3.014107e+003,
-                  64, 4.652365e+000, 1.518342e+000, 1.103350e+000, 1.022475e+000)
-  parameters <- c(1, 3, 3)
-  time       <- c(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0)
+test_that("von Bertalanffy growth model invalid values", {
+  parameters <- c(1, 2, 3, 4)
+  time       <- c(-2.0, -1.5, -1.0, -0.5, 0.0)
   
-  expect_that(vonBertalanffy(time, parameters[1], parameters[2], parameters[3]),
+  result <- vonBertalanffy(time, parameters[1], parameters[2], parameters[3], parameters[4])
+  
+  for (i in 1:length(time)) {
+    expect_that(is.na(result[i]), is_true())
+  }
+})
+
+test_that("von Bertalanffy growth model values", {
+  expected   <- c(1.217769e+000, 1.035581e+000, 1.007518e+000, 1.001658e+000,
+                  1.000369e+000, 1.000082e+000, 1.000018e+000, 1.000004e+000,
+                  1.000001e+000)
+  parameters <- c(1, 2, 3, 4)
+  time       <- c(0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5)
+  
+  expect_that(vonBertalanffy(time, parameters[1], parameters[2], parameters[3], parameters[4]),
               equals(expected, tolerance = MAXERROR))
   
-  expected   <- c(2.544236e+012, 6.326823e+009, 1.605766e+007, 4.713531e+004,
-                  324, 2.461955e+001, 1.336762e+001, 1.217936e+001, 1.202417e+001)
-  parameters <- c(12, 2, 4)
-  time       <- c(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0)
+  expected   <- c(1.199897e+001, 1.199977e+001, 1.199995e+001, 1.199999e+001,
+                  1.200000e+001, 1.200000e+001, 1.200000e+001, 1.200000e+001,
+                  1.200000e+001)
+  parameters <- c(12, 2, 3, -2)
+  time       <- c(0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5)
   
-  expect_that(vonBertalanffy(time, parameters[1], parameters[2], parameters[3]),
+  expect_that(vonBertalanffy(time, parameters[1], parameters[2], parameters[3], parameters[4]),
               equals(expected, tolerance = MAXERROR))
 })
