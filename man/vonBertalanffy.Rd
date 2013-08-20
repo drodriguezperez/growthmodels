@@ -1,6 +1,6 @@
 \name{vonBertalanffy}
 \alias{vonBertalanffy}
-\title{VonBertalanffy growth model}
+\title{von Bertalanffy growth model}
 \usage{
   vonBertalanffy(t, alpha, beta, k)
 }
@@ -14,7 +14,7 @@
   \item{k}{growth rate}
 }
 \description{
-  Computes the VonBertalanffy growth model \deqn{ y(t) =
+  Computes the von Bertalanffy growth model \deqn{ y(t) =
   \frac{\alpha}{(1 + \beta exp(-k * t))^(-3)} }
 }
 \examples{

@@ -22,7 +22,7 @@
 #' Gompertz growth model
 #'
 #' Computes the Gompertz growth model
-#' \deqn{ y(t) = \alpha - exp(-\beta exp(-k^t))}
+#' \deqn{ y(t) = \alpha exp(-\beta exp(-k^t))}
 #' 
 #' @param t time
 #' @param alpha upper asymptote
@@ -33,6 +33,11 @@
 #' 
 #' @examples
 #' growth <- gompertz(0:10, 10, 0.5, 0.3)
+#' 
+#' @references
+#' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
+#' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
+#' 327-336, 1999.
 #' 
 #' @rdname gompertz
 #' @export gompertz

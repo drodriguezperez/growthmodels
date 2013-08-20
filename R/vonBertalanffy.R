@@ -19,9 +19,9 @@
 ##  along with this program.  If not, see <http://www.gnu.org/licenses/>
 ##
 
-#' VonBertalanffy growth model
+#' von Bertalanffy growth model
 #'
-#' Computes the VonBertalanffy growth model
+#' Computes the von Bertalanffy growth model
 #' \deqn{ y(t) = \frac{\alpha}{(1 + \beta exp(-k * t))^(-3)} }
 #' 
 #' @param t time
