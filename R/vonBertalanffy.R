@@ -1,5 +1,5 @@
 ##
-##  VonBertalanffy growth mode
+##  von Bertalanffy growth mode
 ##
 ##  Created by Daniel Rodríguez Pérez on 28/7/2013.
 ##
@@ -19,25 +19,32 @@
 ##  along with this program.  If not, see <http://www.gnu.org/licenses/>
 ##
 
-#' VonBertalanffy growth model
+#' von Bertalanffy growth model
 #'
-#' Computes the VonBertalanffy growth model
-#' \deqn{ y(t) = \frac{\alpha}{(1 + \beta exp(-k * t))^(-3)} }
+#' Computes the von Bertalanffy growth model
+#' \deqn{ y(t) = (\alpha^(1-m) - \beta * exp(-k t))^(1/(1-m)) }{ y(t) = (\alpha^(1-m) - \beta * exp(-k * t))^(1/(1-m)) }
 #' 
 #' @param t time
 #' @param alpha upper asymptote
 #' @param beta growth range 
 #' @param k growth rate
+#' @param m slope of growth 
 #' 
-#' @usage vonBertalanffy(t, alpha, beta, k)
+#' @usage vonBertalanffy(t, alpha, beta, k, m)
 #' 
 #' @examples
-#' growth <- vonBertalanffy(0:10, 10, 0.5, 0.3)
+#' growth <- vonBertalanffy(0:10, 10, 0.5, 0.3, 0.5)
+#' 
+#' @references
+#' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
+#' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
+#' 327-336, 1999.
 #' 
 #' @rdname vonBertalanffy
 #' @export vonBertalanffy
 #' @aliases vonBertalanffy
-vonBertalanffy <- function(t, alpha, beta, k) {
-  result <- richard(t, alpha, beta, k, -1/3)
+vonBertalanffy <- function(t, alpha, beta, k, m) {
+  result <- alpha^(1 - m) - beta * exp(-k * t)
+  result <- result^(1 / (1 - m))
   return(result)
 }

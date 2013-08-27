@@ -1,8 +1,8 @@
 Package: growth
 Type: Package
 Title: Nonlinear Growth Models
-Version: 0.1.0
-Date: 2013-08-02
+Version: 1.0.0
+Date: 2013-08-27
 Author: Daniel Rodriguez Perez <daniel.rodriguez.perez@gmail.com>
 Maintainer: Daniel Rodriguez Perez <daniel.rodriguez.perez@gmail.com>
 Description: A recopilation of nonlinear growth models used in many branches of
@@ -16,7 +16,6 @@ Collate:
     'gompertz.R'
     'logistic.R'
     'chapmanRichards.R'
-    'vanclay.R'
     'richard.R'
     'vonBertalanffy.R'
     'weibull.R'

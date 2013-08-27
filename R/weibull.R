@@ -22,7 +22,7 @@
 #' Weibull growth model
 #'
 #' Computes the Weibull growth model
-#' \deqn{ y(t) = \alpha - \beta exp(-k * t^m) }
+#' \deqn{ y(t) = \alpha - \beta exp(-k * t^m) }{ y(t) = \alpha - \beta * exp(-k * t^m) }
 #' 
 #' @param t time
 #' @param alpha upper asymptote
@@ -34,6 +34,11 @@
 #' 
 #' @examples
 #' growth <- weibull(0:10, 10, 0.5, 0.3, 0.5)
+#' 
+#' @references
+#' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
+#' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
+#' 327-336, 1999.
 #' 
 #' @rdname weibull
 #' @export weibull

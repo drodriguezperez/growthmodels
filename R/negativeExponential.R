@@ -22,7 +22,7 @@
 #' Negative exponential growth model
 #'
 #' Computes the negative exponential growth model
-#' \deqn{ y(t) = \alpha ( 1 - exp(-kt))}
+#' \deqn{ y(t) = \alpha ( 1 - exp(-k t))}{ y(t) = \alpha * ( 1 - exp(-k * t))}
 #' 
 #' @param t time
 #' @param alpha upper asymptote
@@ -32,6 +32,11 @@
 #' 
 #' @examples
 #' growth <- negativeExponential(0:10, 1, .3)
+#' 
+#' @references
+#' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
+#' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
+#' 327-336, 1999.
 #' 
 #' @rdname negativeExponential
 #' @export negativeExponential
