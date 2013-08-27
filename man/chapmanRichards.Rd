@@ -17,7 +17,8 @@
 }
 \description{
   Computes the Chapman-Richards growth model \deqn{ y(t) =
-  \alpha (1 - \beta exp(-k t)^{1/(1-m)}) }
+  \alpha (1 - \beta exp(-k t)^{1/(1-m)}) }{ y(t) = \alpha *
+  (1 - \beta * exp(-k * t)^{1/(1-m)}) }
 }
 \examples{
 growth <- chapmanRichards(0:10, 10, 0.5, 0.3, 0.5)

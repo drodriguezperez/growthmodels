@@ -22,7 +22,7 @@
 #' Negative exponential growth model
 #'
 #' Computes the negative exponential growth model
-#' \deqn{ y(t) = \alpha ( 1 - exp(-kt))}
+#' \deqn{ y(t) = \alpha ( 1 - exp(-k t))}{ y(t) = \alpha * ( 1 - exp(-k * t))}
 #' 
 #' @param t time
 #' @param alpha upper asymptote

@@ -22,7 +22,7 @@
 #' Weibull growth model
 #'
 #' Computes the Weibull growth model
-#' \deqn{ y(t) = \alpha - \beta exp(-k * t^m) }
+#' \deqn{ y(t) = \alpha - \beta exp(-k * t^m) }{ y(t) = \alpha - \beta * exp(-k * t^m) }
 #' 
 #' @param t time
 #' @param alpha upper asymptote

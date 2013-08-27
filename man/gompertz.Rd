@@ -15,7 +15,8 @@
 }
 \description{
   Computes the Gompertz growth model \deqn{ y(t) = \alpha
-  exp(-\beta exp(-k^t))}
+  exp(-\beta exp(-k^t))}{ y(t) = \alpha * exp(-\beta *
+  exp(-k^t))}
 }
 \examples{
 growth <- gompertz(0:10, 10, 0.5, 0.3)

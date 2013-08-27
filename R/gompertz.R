@@ -22,7 +22,7 @@
 #' Gompertz growth model
 #'
 #' Computes the Gompertz growth model
-#' \deqn{ y(t) = \alpha exp(-\beta exp(-k^t))}
+#' \deqn{ y(t) = \alpha exp(-\beta exp(-k^t))}{ y(t) = \alpha * exp(-\beta * exp(-k^t))}
 #' 
 #' @param t time
 #' @param alpha upper asymptote

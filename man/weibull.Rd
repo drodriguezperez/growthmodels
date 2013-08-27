@@ -17,7 +17,8 @@
 }
 \description{
   Computes the Weibull growth model \deqn{ y(t) = \alpha -
-  \beta exp(-k * t^m) }
+  \beta exp(-k * t^m) }{ y(t) = \alpha - \beta * exp(-k *
+  t^m) }
 }
 \examples{
 growth <- weibull(0:10, 10, 0.5, 0.3, 0.5)

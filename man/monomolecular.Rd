@@ -15,7 +15,8 @@
 }
 \description{
   Computes the monomolecular growth model \deqn{ y(t) =
-  \alpha ( 1 - \beta exp(-kt))}
+  \alpha ( 1 - \beta exp(-k t))}{ y(t) = \alpha * ( 1 -
+  \beta * exp(-k * t))}
 }
 \examples{
 growth <- monomolecular(0:10, 10, 0.5, 0.3)

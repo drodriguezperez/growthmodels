@@ -22,7 +22,7 @@
 #' Logistic growth model
 #'
 #' Computes the Logistic growth model
-#' \deqn{ y(t) = \frac{\alpha}{1 + \beta exp(-k t)}}
+#' \deqn{ y(t) = \frac{\alpha}{1 + \beta exp(-k t)}}{ y(t) = \alpha/(1 + \beta * exp(-k * t))}
 #' 
 #' @param t time
 #' @param alpha upper asymptote
@@ -50,21 +50,19 @@ logistic <- function(t, alpha, beta, k) {
 #' Generalised Logistic growth model
 #' 
 #' Computes the Generalised Logistic growth model
-#' \deqn{ y(t) = A + \frac{U - A}{1 + \beta exp(-k (t- t_0))}}
+#' \deqn{ y(t) = A + \frac{U - A}{1 + \beta exp(-k (t- t_0))}}{ y(t) = A + (U - A)/(1 + \beta * exp(-k * (t- t_0)))}
 #' 
 #' @param t time
 #' @param A the lower asymptote
 #' @param U the upper asymptote
 #' @param k growth range
 #' @param beta growth range
-#' @param t0 time shift
+#' @param t0 time shift (default 0)
 #' 
 #' @usage generalisedLogistic(t, A, U, k, beta, t0)
 #' 
 #' @references
-#' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
-#' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
-#' 327-336, 1999.
+#' http://en.wikipedia.org/wiki/Generalised_logistic_function
 #' 
 #' @examples
 #' growth <- generalisedLogistic(0:10, 5, 10, 0.3, 0.5, 3)
@@ -72,6 +70,6 @@ logistic <- function(t, alpha, beta, k) {
 #' @rdname generalisedLogistic
 #' @export generalisedLogistic
 #' @aliases generalisedLogistic
-generalisedLogistic <- function(t, A, U, k, beta, t0) {
+generalisedLogistic <- function(t, A, U, k, beta, t0 = 0) {
   result <- A + logistic(t - t0, U - A, beta, k);
 }

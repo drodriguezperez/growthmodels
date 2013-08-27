@@ -22,7 +22,7 @@
 #' von Bertalanffy growth model
 #'
 #' Computes the von Bertalanffy growth model
-#' \deqn{ y(t) = (\alpha^(1-m) - \beta * exp(-k t))^(1/(1-m)) }
+#' \deqn{ y(t) = (\alpha^(1-m) - \beta * exp(-k t))^(1/(1-m)) }{ y(t) = (\alpha^(1-m) - \beta * exp(-k * t))^(1/(1-m)) }
 #' 
 #' @param t time
 #' @param alpha upper asymptote

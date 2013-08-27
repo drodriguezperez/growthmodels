@@ -15,7 +15,7 @@
 }
 \description{
   Computes the Mitcherlich growth model \deqn{ y(t) =
-  (\alpha - \beta k^t)}
+  (\alpha - \beta k^t)}{ y(t) = \alpha - \beta * k^t}
 }
 \examples{
 growth <- mitcherlich(0:10, 10, 0.5, 0.3)

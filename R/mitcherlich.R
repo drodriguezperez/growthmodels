@@ -22,7 +22,7 @@
 #' Mitcherlich growth model
 #'
 #' Computes the Mitcherlich growth model
-#' \deqn{ y(t) = (\alpha - \beta k^t)}
+#' \deqn{ y(t) = (\alpha - \beta k^t)}{ y(t) = \alpha - \beta * k^t}
 #' 
 #' @param t time
 #' @param alpha upper asymptote

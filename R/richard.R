@@ -22,7 +22,7 @@
 #' Richard growth model
 #'
 #' Computes the Richard growth model
-#' \deqn{ y(t) = \frac{\alpha}{(1 + \beta exp(-k t))^(1/m)} }
+#' \deqn{ y(t) = \frac{\alpha}{(1 + \beta exp(-k t))^{(1/m)}}}{ y(t) = \alpha/((1 + \beta * exp(-k * t))^(1 / m))}
 #' 
 #' @param t time
 #' @param alpha upper asymptote
@@ -52,7 +52,7 @@ richard <- function(t, alpha, beta, k, m) {
 #' Generalised Richard growth model
 #' 
 #' Computes the Generalised Richard growth model
-#' \deqn{ y(t) = A + \frac{U - A}{(1 + \beta exp(-k * (t - t_0)))^(1/m)} }
+#' \deqn{ y(t) = A + \frac{U - A}{(1 + \beta exp(-k (t - t_0)))^{(1/m)} }}{ y(t) = A + (U - A)/(1 + \beta * exp(-k * (t - t_0)))^{(1/m)} }
 #' 
 #' @param t time
 #' @param A the lower asymptote
@@ -60,7 +60,7 @@ richard <- function(t, alpha, beta, k, m) {
 #' @param k growth range
 #' @param m slope of growth 
 #' @param beta growth range
-#' @param t0 time shift
+#' @param t0 time shift (default 0)
 #' 
 #' @usage generalisedRichard(t, A, U, k, m, beta, t0)
 #' 
@@ -68,14 +68,12 @@ richard <- function(t, alpha, beta, k, m) {
 #' growth <- generalisedRichard(0:10, 5, 10, 0.3, 0.5, 1, 3)
 #' 
 #' @references
-#' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
-#' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
-#' 327-336, 1999.
+#' http://en.wikipedia.org/wiki/Generalised_logistic_function
 #' 
 #' @rdname generalisedRichard
 #' @export generalisedRichard
 #' @aliases generalisedRichard
-generalisedRichard <- function(t, A, U, k, m, beta, t0) {
+generalisedRichard <- function(t, A, U, k, m, beta, t0 = 0) {
   result <- A + richard(t - t0, U - A, beta, k, m)
   return(result)
 }

@@ -17,7 +17,8 @@
 }
 \description{
   Computes the von Bertalanffy growth model \deqn{ y(t) =
-  (\alpha^(1-m) - \beta * exp(-k t))^(1/(1-m)) }
+  (\alpha^(1-m) - \beta * exp(-k t))^(1/(1-m)) }{ y(t) =
+  (\alpha^(1-m) - \beta * exp(-k * t))^(1/(1-m)) }
 }
 \examples{
 growth <- vonBertalanffy(0:10, 10, 0.5, 0.3, 0.5)

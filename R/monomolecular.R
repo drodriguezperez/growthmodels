@@ -22,7 +22,7 @@
 #' Monomolecular growth model
 #'
 #' Computes the monomolecular growth model
-#' \deqn{ y(t) = \alpha ( 1 - \beta exp(-kt))}
+#' \deqn{ y(t) = \alpha ( 1 - \beta exp(-k t))}{ y(t) = \alpha * ( 1 - \beta * exp(-k * t))}
 #' 
 #' @param t time
 #' @param alpha upper asymptote

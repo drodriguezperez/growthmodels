@@ -13,7 +13,8 @@
 }
 \description{
   Computes the negative exponential growth model \deqn{
-  y(t) = \alpha ( 1 - exp(-kt))}
+  y(t) = \alpha ( 1 - exp(-k t))}{ y(t) = \alpha * ( 1 -
+  exp(-k * t))}
 }
 \examples{
 growth <- negativeExponential(0:10, 1, .3)

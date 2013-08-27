@@ -17,7 +17,8 @@
 }
 \description{
   Computes the Richard growth model \deqn{ y(t) =
-  \frac{\alpha}{(1 + \beta exp(-k t))^(1/m)} }
+  \frac{\alpha}{(1 + \beta exp(-k t))^{(1/m)}}}{ y(t) =
+  \alpha/((1 + \beta * exp(-k * t))^(1 / m))}
 }
 \examples{
 growth <- richard(0:10, 10, 0.5, 0.3, 0.5)

@@ -22,7 +22,7 @@
 #' Chapman-Richards growth model
 #'
 #' Computes the Chapman-Richards growth model
-#' \deqn{ y(t) = \alpha (1 - \beta exp(-k t)^{1/(1-m)}) }
+#' \deqn{ y(t) = \alpha (1 - \beta exp(-k t)^{1/(1-m)}) }{ y(t) = \alpha * (1 - \beta * exp(-k * t)^{1/(1-m)}) }
 #' 
 #' @param t time
 #' @param alpha upper asymptote

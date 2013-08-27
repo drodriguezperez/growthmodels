@@ -15,7 +15,8 @@
 }
 \description{
   Computes the Logistic growth model \deqn{ y(t) =
-  \frac{\alpha}{1 + \beta exp(-k t)}}
+  \frac{\alpha}{1 + \beta exp(-k t)}}{ y(t) = \alpha/(1 +
+  \beta * exp(-k * t))}
 }
 \examples{
 growth <- logistic(0:10, 10, 0.5, 0.3)
