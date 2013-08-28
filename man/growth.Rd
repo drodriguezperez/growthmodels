@@ -21,6 +21,12 @@
   forestry," Silva Fennica, vol. 33, no. 4, pp. 327-336,
   1999.
 
+  M. M. Kaps, W. O. W. Herring, and W. R. W. Lamberson,
+  "Genetic and environmental parameters for traits derived
+  from the Brody growth curve and their relationships with
+  weaning weight in Angus cattle.," Journal of Animal
+  Science, vol. 78, no. 6, pp. 1436-1442, May 2000.
+
   A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear
   growth models for modeling oil palm yield growth,"
   Journal of Mathematics and Statistics, vol. 1, no. 3, p.

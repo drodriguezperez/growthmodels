@@ -1,3 +1,4 @@
+export(brody)
 export(chapmanRichards)
 export(generalisedLogistic)
 export(generalisedRichard)
