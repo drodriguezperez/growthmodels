@@ -4,7 +4,7 @@
 #' 
 #' \tabular{ll}{
 #'   Package: \tab growth \cr
-#'   Version: \tab 1.0.0 \cr
+#'   Version: \tab 1.1.0 \cr
 #'   License: \tab GPL-3 \cr
 #' }
 #'
@@ -15,9 +15,16 @@
 #' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
 #' 327-336, 1999.
 #' 
+#' A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear growth models for
+#' modeling oil palm yield growth," Journal of Mathematics and Statistics,
+#' vol. 1, no. 3, p. 225, 2005.
+#' 
 #' http://en.wikipedia.org/wiki/Generalised_logistic_function
 #' 
 #' @name growth
 #' @docType package
 #' 
 NULL
+
+
+

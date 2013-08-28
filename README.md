@@ -19,11 +19,15 @@ install_github('growth', 'drodriguezperez')
 * Generalised Logistic
 * Generalised Richard
 * Gompertz
+* Log-logistic
 * Logistic
 * Mitcherlich
 * Monomolecular
+* Morgan -Mercer-Flodin
 * Negative exponential
 * Richard’s
+* Schnute
+* Stannard
 * von Bertalanffy
 * Weibull
 
