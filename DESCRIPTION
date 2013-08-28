@@ -5,8 +5,7 @@ Version: 1.0.0
 Date: 2013-08-27
 Author: Daniel Rodriguez Perez <daniel.rodriguez.perez@gmail.com>
 Maintainer: Daniel Rodriguez Perez <daniel.rodriguez.perez@gmail.com>
-Description: A recopilation of nonlinear growth models used in many branches of
-    science
+Description: A recopilation of nonlinear growth models used in many areas of science
 License: GPL-3
 Collate:
     'growth.R'

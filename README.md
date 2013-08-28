@@ -1,6 +1,6 @@
 # growth: Nonlinear Growth Models
 
-`growth` is a `R` package which recopilation many of nonlinear growth models used in many branches of science.
+`growth` is a `R` package which a recopilation of nonlinear growth models used in many areas of science.
 
 ## Installation
 
@@ -15,14 +15,16 @@ install_github('growth', 'drodriguezperez')
 
 `growth` includes the following nonlinear growth models
 
-* Negative exponential
-* Monomolecular
-* Mitcherlich
+* Chapman-Richards
+* Generalised Logistic
+* Generalised Richard
 * Gompertz
 * Logistic
-* Chapman-Richards
-* von Bertalanffy
+* Mitcherlich
+* Monomolecular
+* Negative exponential
 * Richard’s
+* von Bertalanffy
 * Weibull
 
 ## License

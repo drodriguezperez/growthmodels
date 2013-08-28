@@ -1,6 +1,6 @@
 #' growth: Nonlinear Growth Models
 #'
-#' A recopilation of nonlinear growth models used in many branches of science
+#' A recopilation of nonlinear growth models used in many areas of science
 #' 
 #' \tabular{ll}{
 #'   Package: \tab growth \cr
