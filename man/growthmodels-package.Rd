@@ -1,15 +1,15 @@
 \docType{package}
-\name{growth}
-\alias{growth}
-\alias{growth-package}
-\title{growth: Nonlinear Growth Models}
+\name{growthmodels-package}
+\alias{growthmodels}
+\alias{growthmodels-package}
+\title{growthmodels: Nonlinear Growth Models}
 \description{
   A recopilation of nonlinear growth models used in many
-  branches of science
+  areas
 }
 \details{
-  \tabular{ll}{ Package: \tab growth \cr Version: \tab
-  1.0.0 \cr License: \tab GPL-3 \cr }
+  \tabular{ll}{ Package: \tab growthmodels \cr Version:
+  \tab 1.0.0 \cr License: \tab GPL-3 \cr }
 }
 \author{
   Daniel Rodriguez Perez

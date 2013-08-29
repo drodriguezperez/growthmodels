@@ -1,0 +1,15 @@
+growthmodels 1.0.0
+--------------------------------------------------------------------------------
+
+* `growthmodels` includes the following nonlinear growth models:
+  Chapman-Richards,
+  Generalised Logistic,
+  Generalised Richard,
+  Gompertz,
+  Logistic,
+  Mitcherlich,
+  Monomolecular,
+  Negative exponential,
+  Richard’s,
+  von Bertalanffy,
+  Weibull.
