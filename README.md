@@ -1,19 +1,19 @@
-# growth: Nonlinear Growth Models
+# growthmodels: Nonlinear Growth Models
 
-`growth` is a `R` package which a recopilation of nonlinear growth models used in many areas of science.
+`growthmodels` is a `R` package that contains a compilation of nonlinear growth models used in many areas.
 
 ## Installation
 
-You can install `growth` from `github` using the `devtools` package
+You can install `growthmodels` from `github` using the `devtools` package
 
 ```
 require(devtools)
-install_github('growth', 'drodriguezperez')
+install_github('growthmodels', 'drodriguezperez')
 ```
 
 ## Features
 
-`growth` includes the following nonlinear growth models
+`growthmodels` includes functions for the calculation of the following nonlinear growth models:
 
 * Brody
 * Chapman-Richards

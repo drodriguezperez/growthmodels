@@ -4,8 +4,8 @@
 \alias{growthmodels-package}
 \title{growthmodels: Nonlinear Growth Models}
 \description{
-  A recopilation of nonlinear growth models used in many
-  areas
+  A compilation of nonlinear growth models used in many
+  areas.
 }
 \details{
   \tabular{ll}{ Package: \tab growth \cr Version: \tab
