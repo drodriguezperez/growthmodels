@@ -1,7 +1,7 @@
-growth 1.0.0
+growthmodels 1.0.0
 --------------------------------------------------------------------------------
 
-* `growth` includes the following nonlinear growth models:
+* `growthmodels` includes the following nonlinear growth models:
   Chapman-Richards,
   Generalised Logistic,
   Generalised Richard,
