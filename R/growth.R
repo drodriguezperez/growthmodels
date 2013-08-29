@@ -1,6 +1,6 @@
-#' growth: Nonlinear Growth Models
+#' growthmodels: Nonlinear Growth Models
 #'
-#' A recopilation of nonlinear growth models used in many areas of science
+#' A recopilation of nonlinear growth models used in many areas
 #' 
 #' \tabular{ll}{
 #'   Package: \tab growth \cr
@@ -26,7 +26,8 @@
 #' 
 #' http://en.wikipedia.org/wiki/Generalised_logistic_function
 #' 
-#' @name growth
+#' @name growthmodels-package
+#' @aliases growthmodels
 #' @docType package
 #' 
 NULL

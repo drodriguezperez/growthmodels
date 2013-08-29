@@ -1,4 +1,4 @@
-growth 1.1.0
+growthmodels 1.1.0
 --------------------------------------------------------------------------------
 
 * This version includes new nonlinear growth models:
@@ -8,10 +8,10 @@ growth 1.1.0
   Schnute,
   Stannard.
 
-growth 1.0.0
+growthmodels 1.0.0
 --------------------------------------------------------------------------------
 
-* `growth` includes the following nonlinear growth models:
+* `growthmodels` includes the following nonlinear growth models:
   Chapman-Richards,
   Generalised Logistic,
   Generalised Richard,
