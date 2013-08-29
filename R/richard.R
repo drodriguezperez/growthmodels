@@ -1,5 +1,5 @@
 ##
-##  Richard growth mode
+##  Richard growth model
 ##
 ##  Created by Daniel Rodríguez Pérez on 28/7/2013.
 ##
