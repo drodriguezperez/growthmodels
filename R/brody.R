@@ -22,17 +22,17 @@
 #' Brody growth model
 #'
 #' Computes the Brody growth model
-#' \deqn{ y(t) = \alpha - (\alpha - \beta) exp(- k t) }{ y(t) = \alpha - (\alpha - \beta) * exp(- k * t) }
+#' \deqn{ y(t) = \alpha - (\alpha - w_0) exp(- k t) }{ y(t) = \alpha - (\alpha - w_0) * exp(- k * t) }
 #' 
 #' @param t time
-#' @param alpha a curve parameter 
-#' @param beta the size at t = 0
+#' @param alpha upper asymptote
+#' @param w0 the value at t = 0
 #' @param k growth rate
 #' 
-#' @usage brody(t, alpha, beta, k)
+#' @usage brody(t, alpha, w0, k)
 #' 
 #' @examples
-#' growth <- brody(0:10, 10, 0.5, 0.3)
+#' growth <- brody(0:10, 10, 5, 0.3)
 #' 
 #' @references
 #' M. M. Kaps, W. O. W. Herring, and W. R. W. Lamberson, "Genetic and
@@ -43,7 +43,7 @@
 #' @rdname brody
 #' @export brody
 #' @aliases brody
-brody <- function(t, alpha, beta, k) {
-  result <- alpha - (alpha - beta) * exp(- k * t)
+brody <- function(t, alpha, w0, k) {
+  result <- alpha - (alpha - w0) * exp(- k * t)
   return(result)
 }

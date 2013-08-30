@@ -2,24 +2,24 @@
 \alias{brody}
 \title{Brody growth model}
 \usage{
-  brody(t, alpha, beta, k)
+  brody(t, alpha, w0, k)
 }
 \arguments{
   \item{t}{time}
 
-  \item{alpha}{a curve parameter}
+  \item{alpha}{upper asymptote}
 
-  \item{beta}{the size at t = 0}
+  \item{w0}{the value at t = 0}
 
   \item{k}{growth rate}
 }
 \description{
   Computes the Brody growth model \deqn{ y(t) = \alpha -
-  (\alpha - \beta) exp(- k t) }{ y(t) = \alpha - (\alpha -
-  \beta) * exp(- k * t) }
+  (\alpha - w_0) exp(- k t) }{ y(t) = \alpha - (\alpha -
+  w_0) * exp(- k * t) }
 }
 \examples{
-growth <- brody(0:10, 10, 0.5, 0.3)
+growth <- brody(0:10, 10, 5, 0.3)
 }
 \references{
   M. M. Kaps, W. O. W. Herring, and W. R. W. Lamberson,
