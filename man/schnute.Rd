@@ -2,12 +2,12 @@
 \alias{schnute}
 \title{Schnute growth model}
 \usage{
-  schnute(t, alpha, beta, k, m)
+  schnute(t, r0, beta, k, m)
 }
 \arguments{
   \item{t}{time}
 
-  \item{alpha}{a parameter that controls the size at t = 0}
+  \item{r0}{reference value}
 
   \item{beta}{growth displacement}
 
@@ -17,8 +17,8 @@
 }
 \description{
   Computes the Schnute growth model \deqn{ y(t) = \left[
-  \alpha + \beta exp(k t) \right]^m }{ y(t) = (\alpha +
-  \beta * exp(k * t))^m }
+  r_0 + \beta exp(k t) \right]^m }{ y(t) = (r_0 + \beta *
+  exp(k * t))^m }
 }
 \examples{
 growth <- schnute(0:10, 10, 5, .5, .5)

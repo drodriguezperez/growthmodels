@@ -22,15 +22,15 @@
 #' Schnute growth model
 #'
 #' Computes the Schnute growth model
-#' \deqn{ y(t) =  \left[ \alpha + \beta exp(k t) \right]^m }{ y(t) = (\alpha + \beta * exp(k * t))^m }
+#' \deqn{ y(t) =  \left[ r_0 + \beta exp(k t) \right]^m }{ y(t) = (r_0 + \beta * exp(k * t))^m }
 #' 
 #' @param t time
-#' @param alpha a parameter that controls the size at t = 0
+#' @param r0 reference value
 #' @param beta growth displacement
 #' @param k growth rate 
 #' @param m slope of growth 
 #' 
-#' @usage schnute(t, alpha, beta, k, m)
+#' @usage schnute(t, r0, beta, k, m)
 #' 
 #' @examples
 #' growth <- schnute(0:10, 10, 5, .5, .5)
@@ -43,7 +43,7 @@
 #' @rdname schnute
 #' @export schnute
 #' @aliases schnute
-schnute <- function(t, alpha, beta, k, m) {
-  result <- (alpha + beta * exp(k * t))^m
+schnute <- function(t, r0, beta, k, m) {
+  result <- (r0 + beta * exp(k * t))^m
   return(result)
 }

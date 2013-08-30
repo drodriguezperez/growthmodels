@@ -7,7 +7,7 @@
 \arguments{
   \item{t}{time}
 
-  \item{alpha}{a parameter that controls the size at t = 0}
+  \item{alpha}{upper asymptote}
 
   \item{beta}{growth displacement}
 

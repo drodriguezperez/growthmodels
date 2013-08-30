@@ -25,7 +25,7 @@
 #' \deqn{ y(t) = \alpha \left[ 1 + exp(-(\beta + k t)/m) \right]^{-m}}{ y(t) = \alpha *( 1 + exp(-(beta + k * t)/m))^(-m) }
 #' 
 #' @param t time
-#' @param alpha a parameter that controls the size at t = 0
+#' @param alpha upper asymptote
 #' @param beta growth displacement
 #' @param k growth rate 
 #' @param m slope of growth 
