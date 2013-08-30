@@ -43,6 +43,7 @@
 #' @export loglogistic
 #' @aliases loglogistic
 loglogistic <- function(t, alpha, beta, k) {
-  result <- alpha / (1 + beta * exp(-k * log(t)))
+  t[t < 0] <- NaN
+  result   <- logistic(log(t), alpha, beta, k)
   return(result)
 }

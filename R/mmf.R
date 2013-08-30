@@ -22,15 +22,15 @@
 #' Morgan-Mercer-Flodin growth model
 #'
 #' Computes the Morgan-Mercer-Flodin growth model
-#' \deqn{ y(t) = \frac{(\beta \gamma + \alpha t^m)}{\gamma} +t^m}{ y(t) = (\beta \gamma + \alpha t^m) / (\gamma  + t^m)}
+#' \deqn{ y(t) = \frac{(w_0 \gamma + \alpha t^m)}{\gamma} +t^m}{ y(t) = (w_0 * \gamma + \alpha * t^m) / (\gamma + t^m)}
 #' 
 #' @param t time
 #' @param alpha upper asymptote
-#' @param beta the size at t = 0
-#' @param gamma a parameter that controls the point of inflection. 
+#' @param w0 the value at t = 0
+#' @param gamma parameter that controls the point of inflection 
 #' @param m growth rate 
 #' 
-#' @usage mmf(t, alpha, beta, gamma, m)
+#' @usage mmf(t, alpha, w0, gamma, m)
 #' 
 #' @examples
 #' growth <- mmf(0:10, 10, 0.5, 4, 1)
@@ -43,7 +43,7 @@
 #' @rdname mmf
 #' @export mmf
 #' @aliases mmf
-mmf <- function(t, alpha, beta, gamma, m) {
-  result <- (beta * gamma + alpha * t^m) / (gamma + t^m)
+mmf <- function(t, alpha, w0, gamma, m) {
+  result <- (w0 * gamma + alpha * t^m) / (gamma + t^m)
   return(result)
 }
