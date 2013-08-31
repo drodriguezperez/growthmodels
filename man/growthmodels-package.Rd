@@ -9,7 +9,7 @@
 }
 \details{
   \tabular{ll}{ Package: \tab growthmodels \cr Version:
-  \tab 1.0.0 \cr License: \tab GPL-3 \cr }
+  \tab 1.0.1 \cr License: \tab GPL-3 \cr }
 }
 \author{
   Daniel Rodriguez Perez
