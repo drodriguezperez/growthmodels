@@ -3,7 +3,7 @@
 #' A compilation of nonlinear growth models used in many areas.
 #' 
 #' \tabular{ll}{
-#'   Package: \tab growth \cr
+#'   Package: \tab growthmodels \cr
 #'   Version: \tab 1.1.0 \cr
 #'   License: \tab GPL-3 \cr
 #' }
@@ -31,6 +31,3 @@
 #' @docType package
 #' 
 NULL
-
-
-
