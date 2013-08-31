@@ -10,7 +10,6 @@ License: GPL-3
 URL: https://github.com/drodriguezperez/growthmodels
 BugReports: https://github.com/drodriguezperez/growthmodels/issues
 Collate:
-    'growth.R'
     'negativeExponential.R'
     'monomolecular.R'
     'mitcherlich.R'
@@ -25,3 +24,4 @@ Collate:
     'schnute.R'
     'stannard.R'
     'brody.R'
+    'growthmodels.R'
