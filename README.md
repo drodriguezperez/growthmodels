@@ -58,5 +58,6 @@ install_github('growthmodels', 'drodriguezperez')
    [10.3844/jmssp.2005.225.233](http://www.thescipub.com/pdf/10.3844/jmssp.2005.225.233)
 4. [Generalised logistic function](http://en.wikipedia.org/wiki/Generalised_logistic_function)
 
+# Acknowledgments
 
-http://dx.doi.org/
+I would like to thank J.A. Martinez for all of their helpful discussions during the develop of the package.
