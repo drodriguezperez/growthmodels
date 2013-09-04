@@ -1,3 +1,13 @@
+growthmodels 1.1.0
+--------------------------------------------------------------------------------
+
+* This version includes new nonlinear growth models:
+  Brody
+  Log-logistic,
+  Morgan-Mercer-Flodin,
+  Schnute,
+  Stannard.
+
 growthmodels 1.0.0
 --------------------------------------------------------------------------------
 

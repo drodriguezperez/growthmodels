@@ -1,8 +1,8 @@
 Package: growthmodels
 Type: Package
 Title: Nonlinear Growth Models
-Version: 1.0.1
-Date: 2013-08-29
+Version: 1.1.0
+Date: 2013-09-11
 Author: Daniel Rodriguez Perez <daniel.rodriguez.perez@gmail.com>
 Maintainer: Daniel Rodriguez Perez <daniel.rodriguez.perez@gmail.com>
 Description: A compilation of nonlinear growth models used in many areas
@@ -10,7 +10,6 @@ License: GPL-3
 URL: https://github.com/drodriguezperez/growthmodels
 BugReports: https://github.com/drodriguezperez/growthmodels/issues
 Collate:
-    'growth.R'
     'negativeExponential.R'
     'monomolecular.R'
     'mitcherlich.R'
@@ -20,3 +19,9 @@ Collate:
     'richard.R'
     'vonBertalanffy.R'
     'weibull.R'
+    'loglogistic.R'
+    'mmf.R'
+    'schnute.R'
+    'stannard.R'
+    'brody.R'
+    'growthmodels.R'
