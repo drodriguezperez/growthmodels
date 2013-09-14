@@ -21,6 +21,7 @@ install_github('growthmodels', 'drodriguezperez')
 
 `growthmodels` includes functions for the calculation of the following nonlinear growth models:
 
+* Blumberg
 * Brody
 * Chapman-Richards
 * Generalised Logistic
@@ -52,11 +53,14 @@ install_github('growthmodels', 'drodriguezperez')
    their relationships with weaning weight in Angus cattle.," Journal of
    Animal Science, vol. 78, no. 6, pp. 1436-1442, May 2000.
    [Full text](http://www.ncbi.nlm.nih.gov/pubmed/10875624)
-3. A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear growth models for
+3. A. Tsoularis and J. Wallace, "Analysis of logistic growth models.,"
+   Math Biosci, vol. 179, no. 1, pp. 21–55, Jul. 2002. DOI identifier:
+   [10.1016/j.bbr.2011.03.031](http://dx.doi.org/10.1016/j.bbr.2011.03.031)
+4. A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear growth models for
    modeling oil palm yield growth," Journal of Mathematics and Statistics,
    vol. 1, no. 3, p. 225, 2005. DOI identifier:
-   [10.3844/jmssp.2005.225.233](http://www.thescipub.com/pdf/10.3844/jmssp.2005.225.233)
-4. [Generalised logistic function](http://en.wikipedia.org/wiki/Generalised_logistic_function)
+   [10.3844/jmssp.2005.225.233](http://dx.doi.org/10.3844/jmssp.2005.225.233)
+5. [Generalised logistic function](http://en.wikipedia.org/wiki/Generalised_logistic_functi5on)
 
 # Acknowledgments
 

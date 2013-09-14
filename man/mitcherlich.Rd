@@ -1,5 +1,6 @@
 \name{mitcherlich}
 \alias{mitcherlich}
+\alias{mitscherlich}
 \title{Mitcherlich growth model}
 \usage{
   mitcherlich(t, alpha, beta, k)

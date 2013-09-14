@@ -1,3 +1,10 @@
+growthmodels 1.2.0
+--------------------------------------------------------------------------------
+
+* This version includes new nonlinear growth models:
+  Blumberg
+* Mitcherlich growth model can be called using mitcherlich or mitscherlich
+
 growthmodels 1.1.0
 --------------------------------------------------------------------------------
 

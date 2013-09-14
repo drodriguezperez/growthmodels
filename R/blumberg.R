@@ -1,7 +1,7 @@
 ##
-##  Mitcherlich exponential growth model
+##  Blumberg growth model
 ##
-##  Created by Daniel Rodríguez Pérez on 27/7/2013.
+##  Created by Daniel Rodríguez Pérez on 14/9/2013.
 ##
 ##  Copyright (c) 2013 Daniel Rodríguez Pérez.
 ##
@@ -19,31 +19,28 @@
 ##  along with this program.  If not, see <http://www.gnu.org/licenses/>
 ##
 
-#' Mitcherlich growth model
+#' Blumberg growth model
 #'
 #' Computes the Mitcherlich growth model
-#' \deqn{ y(t) = (\alpha - \beta k^t)}{ y(t) = \alpha - \beta * k^t}
+#' \deqn{ y(t) = \frac{\alpha * (t + t_0)^m}{w_0 + (t + t_0)^m}}{y(t) = (\alpha * (t - t_0)^m)/(w_0 + (t - t_0)^m)}
 #' 
 #' @param t time
 #' @param alpha upper asymptote
-#' @param beta growth range 
-#' @param k growth rate 
-#' 
-#' @usage mitcherlich(t, alpha, beta, k)
+#' @param w0 a reference value at t = t0
+#' @param m slope of growth 
+#' @param t0 time shift (default 0)
 #' 
 #' @examples
-#' growth <- mitcherlich(0:10, 10, 0.5, 0.3)
+#' growth <- blumberg(0:10, 10, 2, 0.5)
 #' 
 #' @references
-#' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
-#' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
-#' 327-336, 1999.
+#' A. Tsoularis and J. Wallace, "Analysis of logistic growth models.,"
+#' Math Biosci, vol. 179, no. 1, pp. 21-55, Jul. 2002.
 #' 
-#' @rdname mitcherlich
-#' @export mitcherlich mitscherlich
-#' @aliases mitcherlich mitscherlich
-mitcherlich <- function(t, alpha, beta, k) {
-  result <- alpha - beta * k^t
+#' @rdname blumberg
+#' @export blumberg
+#' @aliases blumberg
+blumberg <- function(t, alpha, w0, m, t0 = 0) {
+  result <- (alpha * (t + t0)^m) / (w0 + (t + t0)^m)
   return(result)
 }
-mitscherlich <- mitcherlich

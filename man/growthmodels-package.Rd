@@ -27,6 +27,10 @@
   weaning weight in Angus cattle.," Journal of Animal
   Science, vol. 78, no. 6, pp. 1436-1442, May 2000.
 
+  A. Tsoularis and J. Wallace, "Analysis of logistic growth
+  models.," Math Biosci, vol. 179, no. 1, pp. 21-55, Jul.
+  2002.
+
   A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear
   growth models for modeling oil palm yield growth,"
   Journal of Mathematics and Statistics, vol. 1, no. 3, p.
