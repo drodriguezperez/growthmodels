@@ -16,7 +16,7 @@
   \item{t0}{time shift (default 0)}
 }
 \description{
-  Computes the Mitcherlich growth model \deqn{ y(t) =
+  Computes the Blumberg growth model \deqn{ y(t) =
   \frac{\alpha * (t + t_0)^m}{w_0 + (t + t_0)^m}}{y(t) =
   (\alpha * (t - t_0)^m)/(w_0 + (t - t_0)^m)}
 }

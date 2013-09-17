@@ -56,3 +56,30 @@ test_that("Blumberg growth model values", {
   expect_that(blumberg(time, parameters[1], parameters[2], parameters[3], parameters[4]),
               equals(expected, tolerance = MAXERROR))
 })
+
+test_that("Inverse Blumberg growth model values", {
+  parameters <- c(1, 2, 3)
+  time       <- c(0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5)
+  size       <- blumberg(time, parameters[1], parameters[2], parameters[3])
+  
+  expect_that(inverse.blumberg(size, parameters[1], parameters[2], parameters[3]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(10, 5, .43)
+  size       <- blumberg(time, parameters[1], parameters[2], parameters[3])
+  
+  expect_that(inverse.blumberg(size, parameters[1], parameters[2], parameters[3]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(1, 2, 3, 2)
+  size       <- blumberg(time, parameters[1], parameters[2], parameters[3], parameters[4])
+  
+  expect_that(inverse.blumberg(size, parameters[1], parameters[2], parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(10, 5, .43, 2)
+  size       <- blumberg(time, parameters[1], parameters[2], parameters[3], parameters[4])
+  
+  expect_that(inverse.blumberg(size, parameters[1], parameters[2], parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
+})

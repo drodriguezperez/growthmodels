@@ -21,7 +21,7 @@
 
 #' Blumberg growth model
 #'
-#' Computes the Mitcherlich growth model
+#' Computes the Blumberg growth model
 #' \deqn{ y(t) = \frac{\alpha * (t + t_0)^m}{w_0 + (t + t_0)^m}}{y(t) = (\alpha * (t - t_0)^m)/(w_0 + (t - t_0)^m)}
 #' 
 #' @param t time
@@ -42,5 +42,27 @@
 #' @aliases blumberg
 blumberg <- function(t, alpha, w0, m, t0 = 0) {
   result <- (alpha * (t + t0)^m) / (w0 + (t + t0)^m)
+  return(result)
+}
+
+#' Inverse function of Blumberg growth model
+#' 
+#' Computes the time for a size in the Blumberg growth model for the
+#' indicated sizes value
+#'
+#' @param x size
+#' @param alpha upper asymptote
+#' @param w0 a reference value at t = t0
+#' @param m slope of growth 
+#' @param t0 time shift (default 0) 
+#' 
+#' @examples
+#' times <- inverse.blumberg(0:10, 12, 2, 0.5)
+#' 
+#' @rdname inverse.blumberg
+#' @export inverse.blumberg
+#' @aliases inverse.blumberg
+inverse.blumberg <- function(x, alpha, w0, m, t0 = 0) {
+  result <- (x * w0 / (alpha - x))^(1/m) - t0
   return(result)
 }
