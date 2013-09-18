@@ -43,11 +43,23 @@ test_that("Chapman-Richards growth model values", {
   
   expect_that(chapmanRichards(time, parameters[1], parameters[2], parameters[3], parameters[4]),
               equals(expected, tolerance = MAXERROR))
-  
-  expected   <- c(1.217769e+000, 1.035581e+000, 1.007518e+000, 1.001658e+000)
+})
+
+test_that("Inverse Chapman-Richards growth model values", {
   parameters <- c(1, 2, 3, 4)
-  time       <- c(0.5, 1.0, 1.5, 2.0)
+  time       <- c(0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5)
+  size       <- chapmanRichards(time, parameters[1], parameters[2],
+                                parameters[3], parameters[4])
   
-  expect_that(chapmanRichards(time, parameters[1], parameters[2], parameters[3], parameters[4]),
-              equals(expected, tolerance = MAXERROR))
+  expect_that(chapmanRichards.inverse(size, parameters[1], parameters[2],
+                                      parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(1, 1, 2, 2)
+  size       <- chapmanRichards(time, parameters[1], parameters[2],
+                                parameters[3], parameters[4])
+  
+  expect_that(chapmanRichards.inverse(size, parameters[1], parameters[2],
+                                      parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
 })

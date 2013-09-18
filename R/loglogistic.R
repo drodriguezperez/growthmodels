@@ -25,6 +25,7 @@
 #' \deqn{ y(t) = \frac{\alpha}{1 + \beta exp(-k log(t)}}{ y(t) = \alpha/(1 + \beta * exp(-k * log(t))}
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param beta growth range 
 #' @param k growth rate 
@@ -47,3 +48,16 @@ loglogistic <- function(t, alpha, beta, k) {
   result   <- logistic(log(t), alpha, beta, k)
   return(result)
 }
+
+#' @examples
+#' # Calculate inverse function
+#' time <- loglogistic.inverse(growth, 10, 0.5, 0.3)
+#' 
+#' @rdname loglogistic
+#' @export loglogistic.inverse
+#' @aliases loglogistic.inverse
+loglogistic.inverse <- function(x, alpha, beta, k) {
+  result <- exp(logistic.inverse(x, alpha, beta, k))
+  return(result)
+}
+

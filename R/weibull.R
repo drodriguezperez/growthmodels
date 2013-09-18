@@ -25,6 +25,7 @@
 #' \deqn{ y(t) = \alpha - \beta exp(-k * t^m) }{ y(t) = \alpha - \beta * exp(-k * t^m) }
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param beta growth range 
 #' @param k growth rate
@@ -45,5 +46,17 @@
 #' @aliases weibull
 weibull <- function(t, alpha, beta, k, m) {
   result <- alpha - beta * exp(-k * t^m);
+  return(result)
+}
+
+#' @examples
+#' # Calculate inverse function
+#' time <- weibull.inverse(growth, 10, 0.5, 0.3, 0.5)
+#' 
+#' @rdname weibull
+#' @export weibull.inverse
+#' @aliases weibull.inverse
+weibull.inverse <- function(x, alpha, beta, k, m) {
+  result <- ((-1/k) * log((alpha - x)/beta))^(1/m)
   return(result)
 }

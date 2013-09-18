@@ -25,6 +25,7 @@
 #' \deqn{ y(t) = \frac{(w_0 \gamma + \alpha t^m)}{\gamma} +t^m}{ y(t) = (w_0 * \gamma + \alpha * t^m) / (\gamma + t^m)}
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param w0 the value at t = 0
 #' @param gamma parameter that controls the point of inflection 
@@ -45,5 +46,17 @@
 #' @aliases mmf
 mmf <- function(t, alpha, w0, gamma, m) {
   result <- (w0 * gamma + alpha * t^m) / (gamma + t^m)
+  return(result)
+}
+
+#' @examples
+#' # Calculate inverse function
+#' time <- mmf.inverse(growth, 10, 0.5, 4, 1)
+#' 
+#' @rdname mmf
+#' @export mmf.inverse
+#' @aliases mmf.inverse
+mmf.inverse <- function(x, alpha, w0, gamma, m) {
+  result <- (gamma * (w0 - x) / (x - alpha))^(1/m)
   return(result)
 }

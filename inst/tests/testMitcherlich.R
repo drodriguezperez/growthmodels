@@ -40,3 +40,18 @@ test_that("Mitcherlich growth model values", {
   expect_that(mitcherlich(time, parameters[1], parameters[2], parameters[3]),
               equals(expected, tolerance = MAXERROR))
 })
+
+test_that("Inverse Mitcherlich growth model values", {
+  parameters <- c(1, 2, 3)
+  time       <- c(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0)
+  size       <- mitcherlich(time, parameters[1], parameters[2], parameters[3])
+  
+  expect_that(mitcherlich.inverse(size, parameters[1], parameters[2], parameters[3]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(12, 1, 2)
+  size       <- mitcherlich(time, parameters[1], parameters[2], parameters[3])
+  
+  expect_that(mitcherlich.inverse(size, parameters[1], parameters[2], parameters[3]),
+              equals(time, tolerance = MAXERROR))
+})

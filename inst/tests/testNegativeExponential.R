@@ -42,3 +42,18 @@ test_that("Negative exponential growth model values", {
   expect_that(negativeExponential(time, parameters[1], parameters[2]),
               equals(expected, tolerance = MAXERROR))
 })
+
+test_that("Inverse negative exponentia growth model values", {
+  parameters <- c(1, 2)
+  time       <- c(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0)
+  size       <- negativeExponential(time, parameters[1], parameters[2])
+  
+  expect_that(negativeExponential.inverse(size, parameters[1], parameters[2]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(12, 1)
+  size       <- negativeExponential(time, parameters[1], parameters[2])
+  
+  expect_that(negativeExponential.inverse(size, parameters[1], parameters[2]),
+              equals(time, tolerance = MAXERROR))
+})

@@ -25,6 +25,7 @@
 #' \deqn{ y(t) = \alpha ( 1 - \beta exp(-k t))}{ y(t) = \alpha * ( 1 - \beta * exp(-k * t))}
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param beta growth range 
 #' @param k growth rate 
@@ -44,5 +45,17 @@
 #' @aliases monomolecular
 monomolecular <- function(t, alpha, beta, k) {
   result <- alpha * (1.0 - beta * exp(-k * t))
+  return(result)
+}
+
+#' @examples
+#' # Calculate inverse function
+#' time <- monomolecular.inverse(growth, 10, 0.5, 0.3)
+#' 
+#' @rdname monomolecular
+#' @export monomolecular.inverse
+#' @aliases monomolecular.inverse
+monomolecular.inverse <- function(x, alpha, beta, k) {
+  result <- - log((alpha - x)/(alpha * beta)) / k
   return(result)
 }

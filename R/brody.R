@@ -21,10 +21,11 @@
 
 #' Brody growth model
 #'
-#' Computes the Brody growth model
+#' Computes the Brody growth model and its inverse
 #' \deqn{ y(t) = \alpha - (\alpha - w_0) exp(- k t) }{ y(t) = \alpha - (\alpha - w_0) * exp(- k * t) }
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param w0 the value at t = 0
 #' @param k growth rate
@@ -45,5 +46,17 @@
 #' @aliases brody
 brody <- function(t, alpha, w0, k) {
   result <- alpha - (alpha - w0) * exp(- k * t)
+  return(result)
+}
+
+#' @examples
+#' # Calculate inverse function
+#' time <- brody.inverse(growth, 10, 5, 0.3)
+#' 
+#' @rdname brody
+#' @export brody.inverse
+#' @aliases brody.inverse
+brody.inverse <- function(x, alpha, w0, k) {
+  result <- - log((alpha - x) / (alpha - w0)) / k
   return(result)
 }

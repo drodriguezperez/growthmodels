@@ -1,11 +1,16 @@
 \name{stannard}
 \alias{stannard}
+\alias{stannard.inverse}
 \title{Stannard growth model}
 \usage{
   stannard(t, alpha, beta, k, m)
+
+  stannard.inverse(x, alpha, beta, k, m)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -22,6 +27,8 @@
 }
 \examples{
 growth <- stannard(0:10, 1, .2, .1, .5)
+# Calculate inverse function
+time <- stannard.inverse(growth, 1, .2, .1, .5)
 }
 \references{
   A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear

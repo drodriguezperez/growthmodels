@@ -21,10 +21,11 @@
 
 #' Chapman-Richards growth model
 #'
-#' Computes the Chapman-Richards growth model
+#' Computes the Chapman-Richards growth model and its inverse
 #' \deqn{ y(t) = \alpha (1 - \beta exp(-k t)^{1/(1-m)}) }{ y(t) = \alpha * (1 - \beta * exp(-k * t)^{1/(1-m)}) }
 #' 
 #' @param t time
+#' @param x  size
 #' @param alpha upper asymptote
 #' @param beta growth range 
 #' @param k growth rate
@@ -45,5 +46,17 @@
 #' @aliases chapmanRichards
 chapmanRichards <- function(t, alpha, beta, k, m) {
   result <- alpha * (1 - beta * exp(-k * t))^(1 / (1 - m))
+  return(result)
+}
+
+#' @examples
+#' # Calculate inverse function
+#' time <- chapmanRichards.inverse(growth, 10, 0.5, 0.3, 0.5)
+#' 
+#' @rdname chapmanRichards
+#' @export chapmanRichards.inverse
+#' @aliases chapmanRichards.inverse
+chapmanRichards.inverse <- function(x, alpha, beta, k, m) {
+  result <- - log((1 - (x / alpha)^(1-m)) / beta) / k
   return(result)
 }

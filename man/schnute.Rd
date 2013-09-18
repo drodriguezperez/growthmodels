@@ -1,11 +1,16 @@
 \name{schnute}
 \alias{schnute}
+\alias{schnute.inverse}
 \title{Schnute growth model}
 \usage{
   schnute(t, r0, beta, k, m)
+
+  schnute.inverse(x, r0, beta, k, m)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{r0}{reference value}
 
@@ -22,6 +27,8 @@
 }
 \examples{
 growth <- schnute(0:10, 10, 5, .5, .5)
+# Calculate inverse function
+time <- schnute.inverse(growth, 10, 5, .5, .5)
 }
 \references{
   A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear

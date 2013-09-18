@@ -25,6 +25,7 @@
 #' \deqn{ y(t) = (\alpha - \beta k^t)}{ y(t) = \alpha - \beta * k^t}
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param beta growth range 
 #' @param k growth rate 
@@ -47,3 +48,16 @@ mitcherlich <- function(t, alpha, beta, k) {
   return(result)
 }
 mitscherlich <- mitcherlich
+
+#' @examples
+#' # Calculate inverse function
+#' time <- mitcherlich.inverse(growth, 10, 0.5, 0.3)
+#' 
+#' @rdname mitcherlich
+#' @export mitcherlich.inverse mitscherlich.inverse
+#' @aliases mitcherlich.inverse mitscherlich.inverse
+mitcherlich.inverse <- function(x, alpha, beta, k) {
+  result <- log((alpha - x) / beta) / log(k)
+  return(result)
+}
+mitscherlich.inverse <- mitcherlich.inverse

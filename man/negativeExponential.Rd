@@ -1,11 +1,16 @@
 \name{negativeExponential}
 \alias{negativeExponential}
+\alias{negativeExponential.inverse}
 \title{Negative exponential growth model}
 \usage{
   negativeExponential(t, alpha, k)
+
+  negativeExponential.inverse(x, alpha, k)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -17,7 +22,9 @@
   exp(-k * t))}
 }
 \examples{
-growth <- negativeExponential(0:10, 1, .3)
+growth <- negativeExponential(0:10, 1, 0.3)
+# Calculate inverse function
+time <- negativeExponential.inverse(growth, 10, 0.3)
 }
 \references{
   D. Fekedulegn, M. Mac Siurtain, and J. Colbert,

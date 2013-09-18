@@ -57,3 +57,18 @@ test_that("Log-logistic growth model values", {
   expect_that(loglogistic(time, parameters[1], parameters[2], parameters[3]),
               equals(expected, tolerance = MAXERROR))
 })
+
+test_that("Inverse Log-logistic growth model values", {
+  parameters <- c(1, 2, 3)
+  time       <- c(0.0, 0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0)
+  size       <- loglogistic(time, parameters[1], parameters[2], parameters[3])
+  
+  expect_that(loglogistic.inverse(size, parameters[1], parameters[2], parameters[3]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(12, 1, 2)
+  size       <- loglogistic(time, parameters[1], parameters[2], parameters[3])
+  
+  expect_that(loglogistic.inverse(size, parameters[1], parameters[2], parameters[3]),
+              equals(time, tolerance = MAXERROR))
+})

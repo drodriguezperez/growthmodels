@@ -41,3 +41,19 @@ test_that("Weibull growth model values", {
   expect_that(weibull(time, parameters[1], parameters[2], parameters[3], parameters[4]),
               equals(expected, tolerance = MAXERROR))
 })
+
+test_that("Inverse Weibull growth model values", {
+  parameters <- c(1, 2, 3, 4)
+  time       <- c(0.0, 0.5, 1.0, 1.5)
+  size       <- weibull(time, parameters[1], parameters[2], parameters[3], parameters[4])
+  
+  expect_that(weibull.inverse(size, parameters[1], parameters[2], parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(12, 2, 3, 1)
+  size       <- weibull(time, parameters[1], parameters[2], parameters[3], parameters[4])
+  
+  expect_that(weibull.inverse(size, parameters[1], parameters[2], parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
+})
+

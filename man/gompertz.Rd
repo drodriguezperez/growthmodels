@@ -1,11 +1,16 @@
 \name{gompertz}
 \alias{gompertz}
+\alias{gompertz.inverse}
 \title{Gompertz growth model}
 \usage{
   gompertz(t, alpha, beta, k)
+
+  gompertz.inverse(x, alpha, beta, k)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -14,12 +19,14 @@
   \item{k}{growth rate}
 }
 \description{
-  Computes the Gompertz growth model \deqn{ y(t) = \alpha
-  exp(-\beta exp(-k^t))}{ y(t) = \alpha * exp(-\beta *
-  exp(-k^t))}
+  Computes the Gompertz growth model and its inverse \deqn{
+  y(t) = \alpha exp(-\beta exp(-k^t))}{ y(t) = \alpha *
+  exp(-\beta * exp(-k^t))}
 }
 \examples{
 growth <- gompertz(0:10, 10, 0.5, 0.3)
+# Calculate inverse function
+time <- gompertz.inverse(growth, 10, 0.5, 0.3)
 }
 \references{
   D. Fekedulegn, M. Mac Siurtain, and J. Colbert,

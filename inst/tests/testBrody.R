@@ -40,3 +40,18 @@ test_that("Brody growth model values", {
   expect_that(brody(time, parameters[1], parameters[2], parameters[3]),
               equals(expected, tolerance = MAXERROR))
 })
+
+test_that("Inverse Brody growth model values", {
+  parameters <- c(1, 2, 3)
+  time       <- c(0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5)
+  size       <- brody(time, parameters[1], parameters[2], parameters[3])
+    
+  expect_that(brody.inverse(size, parameters[1], parameters[2], parameters[3]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(10, 5, .43)
+  size       <- brody(time, parameters[1], parameters[2], parameters[3])
+  
+  expect_that(brody.inverse(size, parameters[1], parameters[2], parameters[3]),
+              equals(time, tolerance = MAXERROR))
+})
