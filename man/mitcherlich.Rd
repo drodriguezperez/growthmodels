@@ -1,8 +1,6 @@
 \name{mitcherlich}
 \alias{mitcherlich}
 \alias{mitcherlich.inverse}
-\alias{mitscherlich}
-\alias{mitscherlich.inverse}
 \title{Mitcherlich growth model}
 \usage{
   mitcherlich(t, alpha, beta, k)

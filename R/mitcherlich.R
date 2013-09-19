@@ -41,23 +41,21 @@
 #' 327-336, 1999.
 #' 
 #' @rdname mitcherlich
-#' @export mitcherlich mitscherlich
-#' @aliases mitcherlich mitscherlich
+#' @export mitcherlich
+#' @aliases mitcherlich
 mitcherlich <- function(t, alpha, beta, k) {
   result <- alpha - beta * k^t
   return(result)
 }
-mitscherlich <- mitcherlich
 
 #' @examples
 #' # Calculate inverse function
 #' time <- mitcherlich.inverse(growth, 10, 0.5, 0.3)
 #' 
 #' @rdname mitcherlich
-#' @export mitcherlich.inverse mitscherlich.inverse
-#' @aliases mitcherlich.inverse mitscherlich.inverse
+#' @export mitcherlich.inverse
+#' @aliases mitcherlich.inverse
 mitcherlich.inverse <- function(x, alpha, beta, k) {
   result <- log((alpha - x) / beta) / log(k)
   return(result)
 }
-mitscherlich.inverse <- mitcherlich.inverse
