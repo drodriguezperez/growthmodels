@@ -19,7 +19,7 @@ install_github('growthmodels', 'drodriguezperez')
 
 ## Features
 
-`growthmodels` includes functions for the calculation of the following nonlinear growth models:
+`growthmodels` includes functions for the calculation of the following nonlinear growth models and its inverse functions:
 
 * Blumberg
 * Brody

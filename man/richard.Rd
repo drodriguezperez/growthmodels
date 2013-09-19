@@ -1,11 +1,16 @@
 \name{richard}
 \alias{richard}
+\alias{richard.inverse}
 \title{Richard growth model}
 \usage{
   richard(t, alpha, beta, k, m)
+
+  richard.inverse(x, alpha, beta, k, m)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -16,12 +21,13 @@
   \item{m}{slope of growth}
 }
 \description{
-  Computes the Richard growth model \deqn{ y(t) =
-  \frac{\alpha}{(1 + \beta exp(-k t))^{(1/m)}}}{ y(t) =
-  \alpha/((1 + \beta * exp(-k * t))^(1 / m))}
+  Computes the Richard growth model and its inverse \deqn{
+  y(t) = \frac{\alpha}{(1 + \beta exp(-k t))^{(1/m)}}}{
+  y(t) = \alpha/((1 + \beta * exp(-k * t))^(1 / m))}
 }
 \examples{
 growth <- richard(0:10, 10, 0.5, 0.3, 0.5)
+time <- richard.inverse(growth, 10, 0.5, 0.3, 0.5)
 }
 \references{
   D. Fekedulegn, M. Mac Siurtain, and J. Colbert,
