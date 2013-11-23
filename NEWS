@@ -4,7 +4,7 @@ growthmodels 1.2.0
 * This version includes new nonlinear growth models:
   Blumberg
 * Mitcherlich growth model can be called using mitcherlich or mitscherlich
-* Include the inverse funtions for all models
+* Include the inverse functions for the models
 
 growthmodels 1.1.0
 --------------------------------------------------------------------------------

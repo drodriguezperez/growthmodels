@@ -1,9 +1,9 @@
 Package: growthmodels
 Type: Package
 Title: Nonlinear Growth Models
-Version: 1.1.0
-Date: 2013-09-11
-Author: Daniel Rodriguez Perez <daniel.rodriguez.perez@gmail.com>
+Version: 1.2.0
+Date: 2013-11-23
+Author: Daniel Rodriguez Perez
 Maintainer: Daniel Rodriguez Perez <daniel.rodriguez.perez@gmail.com>
 Description: A compilation of nonlinear growth models used in many areas
 License: GPL-3

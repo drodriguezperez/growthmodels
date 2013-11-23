@@ -4,7 +4,7 @@
 #' 
 #' \tabular{ll}{
 #'   Package: \tab growthmodels \cr
-#'   Version: \tab 1.1.0 \cr
+#'   Version: \tab 1.2.0 \cr
 #'   License: \tab GPL-3 \cr
 #' }
 #'
