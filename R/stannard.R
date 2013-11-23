@@ -25,6 +25,7 @@
 #' \deqn{ y(t) = \alpha \left[ 1 + exp(-(\beta + k t)/m) \right]^{-m}}{ y(t) = \alpha *( 1 + exp(-(beta + k * t)/m))^(-m) }
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param beta growth displacement
 #' @param k growth rate 
@@ -45,5 +46,17 @@
 #' @aliases stannard
 stannard <- function(t, alpha, beta, k, m) {
   result <- alpha * ( 1 + exp(-(beta + k * t)/m) )^(-m)
+  return(result)
+}
+
+#' @examples
+#' # Calculate inverse function
+#' time <- stannard.inverse(growth, 1, .2, .1, .5)
+#' 
+#' @rdname stannard
+#' @export stannard.inverse
+#' @aliases stannard.inverse
+stannard.inverse <- function(x, alpha, beta, k, m) {
+  result <- - (beta + m * log((alpha / x)^(1 / m) - 1)) / k
   return(result)
 }

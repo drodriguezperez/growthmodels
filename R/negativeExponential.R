@@ -25,13 +25,14 @@
 #' \deqn{ y(t) = \alpha ( 1 - exp(-k t))}{ y(t) = \alpha * ( 1 - exp(-k * t))}
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param k growth rate 
 #' 
 #' @usage negativeExponential(t, alpha, k)
 #' 
 #' @examples
-#' growth <- negativeExponential(0:10, 1, .3)
+#' growth <- negativeExponential(0:10, 1, 0.3)
 #' 
 #' @references
 #' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
@@ -43,5 +44,17 @@
 #' @aliases negativeExponential
 negativeExponential <- function(t, alpha, k) {
   result <- alpha * (1.0 - exp(-k * t))
+  return(result)
+}
+
+#' @examples
+#' # Calculate inverse function
+#' time <- negativeExponential.inverse(growth, 10, 0.3)
+#' 
+#' @rdname negativeExponential
+#' @export negativeExponential.inverse
+#' @aliases negativeExponential.inverse
+negativeExponential.inverse <- function(x, alpha, k) {
+  result <- -log(1 - x/alpha) / k
   return(result)
 }

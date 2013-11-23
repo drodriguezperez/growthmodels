@@ -56,6 +56,25 @@ test_that("Richard growth model values", {
               equals(expected, tolerance = MAXERROR))
 })
 
+test_that("Inverse Richards growth model values", {
+  parameters <- c(1, 2, 3, 4)
+  time       <- c(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0)
+  size       <- richard(time, parameters[1], parameters[2],
+                                parameters[3], parameters[4])
+  
+  expect_that(richard.inverse(size, parameters[1], parameters[2],
+                                      parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(12, 2, 3, 1)
+  size       <- richard(time, parameters[1], parameters[2],
+                        parameters[3], parameters[4])
+  
+  expect_that(richard.inverse(size, parameters[1], parameters[2],
+                              parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
+})
+
 test_that("Generalised Richard growth model values", {
   expected   <- c(1.138049e+000, 1.257893e+000, 1.481437e+000, 1.891192e+000,
                   2.519671e+000, 2.925422e+000, 2.993318e+000, 2.999447e+000,
@@ -76,4 +95,27 @@ test_that("Generalised Richard growth model values", {
   expect_that(generalisedRichard(time, parameters[1], parameters[2], parameters[3],
                                  parameters[4], parameters[5], parameters[6]),
               equals(expected, tolerance = MAXERROR))
+})
+
+test_that("Inverse Richards growth model values", {
+  parameters <- c(1, 3, 5, 4, 2, 0)
+  time       <- c(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0)
+  size       <- generalisedRichard(time, parameters[1], parameters[2],
+                                   parameters[3], parameters[4],
+                                   parameters[5], parameters[6])
+  
+  expect_that(generalisedRichard.inverse(size, parameters[1], parameters[2],
+                                         parameters[3], parameters[4], parameters[5],
+                                         parameters[6]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(12, 4, 5, 1, 2, 1)
+  size       <- generalisedRichard(time, parameters[1], parameters[2],
+                                   parameters[3], parameters[4],
+                                   parameters[5], parameters[6])
+  
+  expect_that(generalisedRichard.inverse(size, parameters[1], parameters[2],
+                              parameters[3], parameters[4], parameters[5],
+                                         parameters[6]),
+              equals(time, tolerance = MAXERROR))
 })

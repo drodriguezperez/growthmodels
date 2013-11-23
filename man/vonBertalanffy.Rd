@@ -1,11 +1,16 @@
 \name{vonBertalanffy}
 \alias{vonBertalanffy}
+\alias{vonBertalanffy.inverse}
 \title{von Bertalanffy growth model}
 \usage{
   vonBertalanffy(t, alpha, beta, k, m)
+
+  vonBertalanffy.inverse(x, alpha, beta, k, m)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -22,6 +27,8 @@
 }
 \examples{
 growth <- vonBertalanffy(0:10, 10, 0.5, 0.3, 0.5)
+# Calculate inverse function
+time <- vonBertalanffy.inverse(growth, 10, 0.5, 0.3, 0.5)
 }
 \references{
   D. Fekedulegn, M. Mac Siurtain, and J. Colbert,

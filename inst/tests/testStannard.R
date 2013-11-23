@@ -40,3 +40,18 @@ test_that("Stannard growth model values", {
   expect_that(stannard(time, parameters[1], parameters[2], parameters[3], parameters[4]),
               equals(expected, tolerance = MAXERROR))
 })
+
+test_that("Inverse Stannard growth model values", {
+  parameters <- c(1, 2, 3, 0.5)
+  time       <- c(-2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 4.0)
+  size       <- stannard(time, parameters[1], parameters[2], parameters[3], parameters[4])
+  
+  expect_that(stannard.inverse(size, parameters[1], parameters[2], parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(12, 2, 3, .70)
+  size       <- stannard(time, parameters[1], parameters[2], parameters[3], parameters[4])
+  
+  expect_that(stannard.inverse(size, parameters[1], parameters[2], parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
+})

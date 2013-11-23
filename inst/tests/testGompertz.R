@@ -41,3 +41,18 @@ test_that("Gompertz growth model values", {
   expect_that(gompertz(time, parameters[1], parameters[2], parameters[3]),
               equals(expected, tolerance = MAXERROR))
 })
+
+test_that("Inverse Gompertz growth model values", {
+  parameters <- c(1, 2, 3)
+  time       <- c(-1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0)
+  size       <- gompertz(time, parameters[1], parameters[2], parameters[3])
+  
+  expect_that(gompertz.inverse(size, parameters[1], parameters[2], parameters[3]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(12, 1, 2)
+  size       <- gompertz(time, parameters[1], parameters[2], parameters[3])
+  
+  expect_that(gompertz.inverse(size, parameters[1], parameters[2], parameters[3]),
+              equals(time, tolerance = MAXERROR))
+})

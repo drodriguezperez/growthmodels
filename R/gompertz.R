@@ -21,10 +21,11 @@
 
 #' Gompertz growth model
 #'
-#' Computes the Gompertz growth model
+#' Computes the Gompertz growth model and its inverse
 #' \deqn{ y(t) = \alpha exp(-\beta exp(-k^t))}{ y(t) = \alpha * exp(-\beta * exp(-k^t))}
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param beta growth displacement
 #' @param k growth rate 
@@ -44,5 +45,17 @@
 #' @aliases gompertz
 gompertz <- function(t, alpha, beta, k) {
   result <- alpha * exp(-beta * exp(-k * t));
+  return(result)
+}
+
+#' @examples
+#' # Calculate inverse function
+#' time <- gompertz.inverse(growth, 10, 0.5, 0.3)
+#' 
+#' @rdname gompertz
+#' @export gompertz.inverse
+#' @aliases gompertz.inverse
+gompertz.inverse <- function(x, alpha, beta, k) {
+  result <- - log(-log(x / alpha) / beta) / k
   return(result)
 }

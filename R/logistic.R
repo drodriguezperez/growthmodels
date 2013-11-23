@@ -25,6 +25,7 @@
 #' \deqn{ y(t) = \frac{\alpha}{1 + \beta exp(-k t)}}{ y(t) = \alpha/(1 + \beta * exp(-k * t))}
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param beta growth range 
 #' @param k growth rate 
@@ -47,12 +48,25 @@ logistic <- function(t, alpha, beta, k) {
   return(result)
 }
 
+#' @examples
+#' # Calculate inverse function
+#' time <- logistic.inverse(growth, 10, 0.5, 0.3)
+#' 
+#' @rdname logistic
+#' @export logistic.inverse
+#' @aliases logistic.inverse
+logistic.inverse <- function(x, alpha, beta, k) {
+  result <- - log((alpha - x) / (beta * x)) / k
+  return(result)
+}
+
 #' Generalised Logistic growth model
 #' 
 #' Computes the Generalised Logistic growth model
 #' \deqn{ y(t) = A + \frac{U - A}{1 + \beta exp(-k (t- t_0))}}{ y(t) = A + (U - A)/(1 + \beta * exp(-k * (t- t_0)))}
 #' 
 #' @param t time
+#' @param x size
 #' @param A the lower asymptote
 #' @param U the upper asymptote
 #' @param k growth range
@@ -72,4 +86,16 @@ logistic <- function(t, alpha, beta, k) {
 #' @aliases generalisedLogistic
 generalisedLogistic <- function(t, A, U, k, beta, t0 = 0) {
   result <- A + logistic(t - t0, U - A, beta, k);
+}
+
+#' @examples
+#' # Calculate inverse function
+#' time <- generalisedLogistic.inverse(growth, 5, 10, 0.3, 0.5, 3)
+#' 
+#' @rdname generalisedLogistic
+#' @export generalisedLogistic.inverse
+#' @aliases generalisedLogistic.inverse
+generalisedLogistic.inverse <- function(x, A, U, k, beta, t0 = 0) {
+  result <- logistic.inverse(x - A, U - A, beta, k) + t0
+  return(result)
 }

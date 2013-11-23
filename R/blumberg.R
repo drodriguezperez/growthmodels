@@ -1,7 +1,7 @@
 ##
-##  Weibull growth model
+##  Blumberg growth model
 ##
-##  Created by Daniel Rodríguez Pérez on 28/7/2013.
+##  Created by Daniel Rodríguez Pérez on 14/9/2013.
 ##
 ##  Copyright (c) 2013 Daniel Rodríguez Pérez.
 ##
@@ -19,44 +19,41 @@
 ##  along with this program.  If not, see <http://www.gnu.org/licenses/>
 ##
 
-#' Weibull growth model
+#' Blumberg growth model
 #'
-#' Computes the Weibull growth model
-#' \deqn{ y(t) = \alpha - \beta exp(-k * t^m) }{ y(t) = \alpha - \beta * exp(-k * t^m) }
+#' Computes the Blumberg growth model and its inverse
+#' \deqn{ y(t) = \frac{\alpha * (t + t_0)^m}{w_0 + (t + t_0)^m}}{y(t) = (\alpha * (t - t_0)^m)/(w_0 + (t - t_0)^m)}
 #' 
 #' @param t time
 #' @param x size
 #' @param alpha upper asymptote
-#' @param beta growth range 
-#' @param k growth rate
+#' @param w0 a reference value at t = t0
 #' @param m slope of growth 
-#' 
-#' @usage weibull(t, alpha, beta, k, m)
+#' @param t0 time shift (default 0)
 #' 
 #' @examples
-#' growth <- weibull(0:10, 10, 0.5, 0.3, 0.5)
+#' growth <- blumberg(0:10, 10, 2, 0.5)
 #' 
 #' @references
-#' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
-#' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
-#' 327-336, 1999.
+#' A. Tsoularis and J. Wallace, "Analysis of logistic growth models.,"
+#' Math Biosci, vol. 179, no. 1, pp. 21-55, Jul. 2002.
 #' 
-#' @rdname weibull
-#' @export weibull
-#' @aliases weibull
-weibull <- function(t, alpha, beta, k, m) {
-  result <- alpha - beta * exp(-k * t^m);
+#' @rdname blumberg
+#' @export blumberg
+#' @aliases blumberg
+blumberg <- function(t, alpha, w0, m, t0 = 0) {
+  result <- (alpha * (t + t0)^m) / (w0 + (t + t0)^m)
   return(result)
 }
 
 #' @examples
 #' # Calculate inverse function
-#' time <- weibull.inverse(growth, 10, 0.5, 0.3, 0.5)
+#' time <- blumberg.inverse(growth, 12, 2, 0.5) 
 #' 
-#' @rdname weibull
-#' @export weibull.inverse
-#' @aliases weibull.inverse
-weibull.inverse <- function(x, alpha, beta, k, m) {
-  result <- ((-1/k) * log((alpha - x)/beta))^(1/m)
+#' @rdname blumberg
+#' @export blumberg.inverse
+#' @aliases blumberg.inverse
+blumberg.inverse <- function(x, alpha, w0, m, t0 = 0) {
+  result <- (x * w0 / (alpha - x))^(1/m) - t0
   return(result)
 }

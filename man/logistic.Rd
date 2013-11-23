@@ -1,11 +1,16 @@
 \name{logistic}
 \alias{logistic}
+\alias{logistic.inverse}
 \title{Logistic growth model}
 \usage{
   logistic(t, alpha, beta, k)
+
+  logistic.inverse(x, alpha, beta, k)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -20,6 +25,8 @@
 }
 \examples{
 growth <- logistic(0:10, 10, 0.5, 0.3)
+# Calculate inverse function
+time <- logistic.inverse(growth, 10, 0.5, 0.3)
 }
 \references{
   D. Fekedulegn, M. Mac Siurtain, and J. Colbert,

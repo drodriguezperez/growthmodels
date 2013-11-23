@@ -1,11 +1,16 @@
 \name{generalisedLogistic}
 \alias{generalisedLogistic}
+\alias{generalisedLogistic.inverse}
 \title{Generalised Logistic growth model}
 \usage{
   generalisedLogistic(t, A, U, k, beta, t0)
+
+  generalisedLogistic.inverse(x, A, U, k, beta, t0 = 0)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{A}{the lower asymptote}
 
@@ -24,6 +29,8 @@
 }
 \examples{
 growth <- generalisedLogistic(0:10, 5, 10, 0.3, 0.5, 3)
+# Calculate inverse function
+time <- generalisedLogistic.inverse(growth, 5, 10, 0.3, 0.5, 3)
 }
 \references{
   http://en.wikipedia.org/wiki/Generalised_logistic_function

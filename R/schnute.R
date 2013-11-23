@@ -25,6 +25,7 @@
 #' \deqn{ y(t) =  \left[ r_0 + \beta exp(k t) \right]^m }{ y(t) = (r_0 + \beta * exp(k * t))^m }
 #' 
 #' @param t time
+#' @param x size
 #' @param r0 reference value
 #' @param beta growth displacement
 #' @param k growth rate 
@@ -45,5 +46,17 @@
 #' @aliases schnute
 schnute <- function(t, r0, beta, k, m) {
   result <- (r0 + beta * exp(k * t))^m
+  return(result)
+}
+
+#' @examples
+#' # Calculate inverse function
+#' time <- schnute.inverse(growth, 10, 5, .5, .5)
+#' 
+#' @rdname schnute
+#' @export schnute.inverse
+#' @aliases schnute.inverse
+schnute.inverse <- function(x, r0, beta, k, m) {
+  result <- log((x^(1 / m) - r0) / beta) / k
   return(result)
 }

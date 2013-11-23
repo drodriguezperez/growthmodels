@@ -1,11 +1,16 @@
 \name{mitcherlich}
 \alias{mitcherlich}
+\alias{mitcherlich.inverse}
 \title{Mitcherlich growth model}
 \usage{
   mitcherlich(t, alpha, beta, k)
+
+  mitcherlich.inverse(x, alpha, beta, k)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -19,6 +24,8 @@
 }
 \examples{
 growth <- mitcherlich(0:10, 10, 0.5, 0.3)
+# Calculate inverse function
+time <- mitcherlich.inverse(growth, 10, 0.5, 0.3)
 }
 \references{
   D. Fekedulegn, M. Mac Siurtain, and J. Colbert,

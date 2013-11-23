@@ -40,3 +40,18 @@ test_that("Morgan-Mercer-Flodin growth model values", {
   expect_that(mmf(time, parameters[1], parameters[2], parameters[3], parameters[4]),
               equals(expected, tolerance = MAXERROR))
 })
+
+test_that("Inverse Morgan-Mercer-Flodin growth model values", {
+  parameters <- c(1, 2, 3, 4)
+  time       <- c(0.0, 0.5, 1.0, 1.5, 2.0, 3.0, 4.0, 5.0)
+  size       <- mmf(time, parameters[1], parameters[2], parameters[3], parameters[4])
+  
+  expect_that(mmf.inverse(size, parameters[1], parameters[2], parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
+  
+  parameters <- c(12, 2, 3, 1)
+  size       <- mmf(time, parameters[1], parameters[2], parameters[3], parameters[4])
+  
+  expect_that(mmf.inverse(size, parameters[1], parameters[2], parameters[3], parameters[4]),
+              equals(time, tolerance = MAXERROR))
+})

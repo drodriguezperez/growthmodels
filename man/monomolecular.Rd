@@ -1,11 +1,16 @@
 \name{monomolecular}
 \alias{monomolecular}
+\alias{monomolecular.inverse}
 \title{Monomolecular growth model}
 \usage{
   monomolecular(t, alpha, beta, k)
+
+  monomolecular.inverse(x, alpha, beta, k)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -20,6 +25,8 @@
 }
 \examples{
 growth <- monomolecular(0:10, 10, 0.5, 0.3)
+# Calculate inverse function
+time <- monomolecular.inverse(growth, 10, 0.5, 0.3)
 }
 \references{
   D. Fekedulegn, M. Mac Siurtain, and J. Colbert,

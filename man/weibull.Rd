@@ -1,11 +1,16 @@
 \name{weibull}
 \alias{weibull}
+\alias{weibull.inverse}
 \title{Weibull growth model}
 \usage{
   weibull(t, alpha, beta, k, m)
+
+  weibull.inverse(x, alpha, beta, k, m)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -22,6 +27,8 @@
 }
 \examples{
 growth <- weibull(0:10, 10, 0.5, 0.3, 0.5)
+# Calculate inverse function
+time <- weibull.inverse(growth, 10, 0.5, 0.3, 0.5)
 }
 \references{
   D. Fekedulegn, M. Mac Siurtain, and J. Colbert,

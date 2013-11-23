@@ -1,11 +1,16 @@
 \name{loglogistic}
 \alias{loglogistic}
+\alias{loglogistic.inverse}
 \title{Log-logistic growth model}
 \usage{
   loglogistic(t, alpha, beta, k)
+
+  loglogistic.inverse(x, alpha, beta, k)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -20,6 +25,8 @@
 }
 \examples{
 growth <- loglogistic(0:10, 10, 0.5, 0.3)
+# Calculate inverse function
+time <- loglogistic.inverse(growth, 10, 0.5, 0.3)
 }
 \references{
   A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear

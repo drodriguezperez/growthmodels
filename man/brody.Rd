@@ -1,11 +1,16 @@
 \name{brody}
 \alias{brody}
+\alias{brody.inverse}
 \title{Brody growth model}
 \usage{
   brody(t, alpha, w0, k)
+
+  brody.inverse(x, alpha, w0, k)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -14,12 +19,14 @@
   \item{k}{growth rate}
 }
 \description{
-  Computes the Brody growth model \deqn{ y(t) = \alpha -
-  (\alpha - w_0) exp(- k t) }{ y(t) = \alpha - (\alpha -
-  w_0) * exp(- k * t) }
+  Computes the Brody growth model and its inverse \deqn{
+  y(t) = \alpha - (\alpha - w_0) exp(- k t) }{ y(t) =
+  \alpha - (\alpha - w_0) * exp(- k * t) }
 }
 \examples{
 growth <- brody(0:10, 10, 5, 0.3)
+# Calculate inverse function
+time <- brody.inverse(growth, 10, 5, 0.3)
 }
 \references{
   M. M. Kaps, W. O. W. Herring, and W. R. W. Lamberson,

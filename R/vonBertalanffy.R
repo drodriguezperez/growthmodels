@@ -25,6 +25,7 @@
 #' \deqn{ y(t) = (\alpha^(1-m) - \beta * exp(-k t))^(1/(1-m)) }{ y(t) = (\alpha^(1-m) - \beta * exp(-k * t))^(1/(1-m)) }
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param beta growth range 
 #' @param k growth rate
@@ -46,5 +47,17 @@
 vonBertalanffy <- function(t, alpha, beta, k, m) {
   result <- alpha^(1 - m) - beta * exp(-k * t)
   result <- result^(1 / (1 - m))
+  return(result)
+}
+
+#' @examples
+#' # Calculate inverse function
+#' time <- vonBertalanffy.inverse(growth, 10, 0.5, 0.3, 0.5)
+#' 
+#' @rdname vonBertalanffy
+#' @export vonBertalanffy.inverse
+#' @aliases vonBertalanffy.inverse
+vonBertalanffy.inverse <- function(x, alpha, beta, k, m) {
+  result <- -log((alpha^(1 - m) - x^(1 - m))/beta) / k
   return(result)
 }

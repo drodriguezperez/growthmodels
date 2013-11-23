@@ -21,10 +21,11 @@
 
 #' Richard growth model
 #'
-#' Computes the Richard growth model
+#' Computes the Richard growth model and its inverse
 #' \deqn{ y(t) = \frac{\alpha}{(1 + \beta exp(-k t))^{(1/m)}}}{ y(t) = \alpha/((1 + \beta * exp(-k * t))^(1 / m))}
 #' 
 #' @param t time
+#' @param x size
 #' @param alpha upper asymptote
 #' @param beta growth range 
 #' @param k growth rate
@@ -49,12 +50,24 @@ richard <- function(t, alpha, beta, k, m) {
   return(result)
 }
 
+#' @examples
+#' time <- richard.inverse(growth, 10, 0.5, 0.3, 0.5)
+#' 
+#' @rdname richard
+#' @export richard.inverse
+#' @aliases richard.inverse
+richard.inverse <- function(x, alpha, beta, k, m){
+  result <- -log(((alpha/x)^m - 1)/beta)/k
+  return(result)
+}
+
 #' Generalised Richard growth model
 #' 
-#' Computes the Generalised Richard growth model
+#' Computes the Generalised Richard growth model and its inverse
 #' \deqn{ y(t) = A + \frac{U - A}{(1 + \beta exp(-k (t - t_0)))^{(1/m)} }}{ y(t) = A + (U - A)/(1 + \beta * exp(-k * (t - t_0)))^{(1/m)} }
 #' 
 #' @param t time
+#' @param x size
 #' @param A the lower asymptote
 #' @param U the upper asymptote
 #' @param k growth range
@@ -75,5 +88,16 @@ richard <- function(t, alpha, beta, k, m) {
 #' @aliases generalisedRichard
 generalisedRichard <- function(t, A, U, k, m, beta, t0 = 0) {
   result <- A + richard(t - t0, U - A, beta, k, m)
+  return(result)
+}
+
+#' @examples
+#' time <- generalisedRichard.inverse(growth, 5, 10, 0.3, 0.5, 1, 3)
+#' 
+#' @rdname generalisedRichard
+#' @export generalisedRichard.inverse
+#' @aliases generalisedRichard.inverse
+generalisedRichard.inverse <- function(x, A, U, k, m, beta, t0 = 0) {
+  result <- richard.inverse(x - A, U - A, beta, k, m) + t0
   return(result)
 }

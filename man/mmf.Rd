@@ -1,11 +1,16 @@
 \name{mmf}
 \alias{mmf}
+\alias{mmf.inverse}
 \title{Morgan-Mercer-Flodin growth model}
 \usage{
   mmf(t, alpha, w0, gamma, m)
+
+  mmf.inverse(x, alpha, w0, gamma, m)
 }
 \arguments{
   \item{t}{time}
+
+  \item{x}{size}
 
   \item{alpha}{upper asymptote}
 
@@ -23,6 +28,8 @@
 }
 \examples{
 growth <- mmf(0:10, 10, 0.5, 4, 1)
+# Calculate inverse function
+time <- mmf.inverse(growth, 10, 0.5, 4, 1)
 }
 \references{
   A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear
