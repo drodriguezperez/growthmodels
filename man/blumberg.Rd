@@ -3,9 +3,9 @@
 \alias{blumberg.inverse}
 \title{Blumberg growth model}
 \usage{
-  blumberg(t, alpha, w0, m, t0 = 0)
+blumberg(t, alpha, w0, m, t0 = 0)
 
-  blumberg.inverse(x, alpha, w0, m, t0 = 0)
+blumberg.inverse(x, alpha, w0, m, t0 = 0)
 }
 \arguments{
   \item{t}{time}
@@ -21,19 +21,21 @@
   \item{t0}{time shift (default 0)}
 }
 \description{
-  Computes the Blumberg growth model and its inverse \deqn{
-  y(t) = \frac{\alpha * (t + t_0)^m}{w_0 + (t +
-  t_0)^m}}{y(t) = (\alpha * (t - t_0)^m)/(w_0 + (t -
-  t_0)^m)}
+Computes the Blumberg growth model and its inverse \deqn{
+y(t) = \frac{\alpha * (t + t_0)^m}{w_0 + (t + t_0)^m}}{y(t)
+= (\alpha * (t - t_0)^m)/(w_0 + (t - t_0)^m)}
 }
 \examples{
 growth <- blumberg(0:10, 10, 2, 0.5)
 # Calculate inverse function
 time <- blumberg.inverse(growth, 12, 2, 0.5)
 }
+\author{
+Daniel Rodriguez Perez
+}
 \references{
-  A. Tsoularis and J. Wallace, "Analysis of logistic growth
-  models.," Math Biosci, vol. 179, no. 1, pp. 21-55, Jul.
-  2002.
+A. Tsoularis and J. Wallace, "Analysis of logistic growth
+models.," Math Biosci, vol. 179, no. 1, pp. 21-55, Jul.
+2002.
 }
 

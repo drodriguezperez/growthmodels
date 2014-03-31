@@ -3,9 +3,9 @@
 \alias{mmf.inverse}
 \title{Morgan-Mercer-Flodin growth model}
 \usage{
-  mmf(t, alpha, w0, gamma, m)
+mmf(t, alpha, w0, gamma, m)
 
-  mmf.inverse(x, alpha, w0, gamma, m)
+mmf.inverse(x, alpha, w0, gamma, m)
 }
 \arguments{
   \item{t}{time}
@@ -22,19 +22,21 @@
   \item{m}{growth rate}
 }
 \description{
-  Computes the Morgan-Mercer-Flodin growth model \deqn{
-  y(t) = \frac{(w_0 \gamma + \alpha t^m)}{\gamma} +t^m}{
-  y(t) = (w_0 * \gamma + \alpha * t^m) / (\gamma + t^m)}
+Computes the Morgan-Mercer-Flodin growth model \deqn{ y(t)
+= \frac{(w_0 \gamma + \alpha t^m)}{\gamma} +t^m}{ y(t) =
+(w_0 * \gamma + \alpha * t^m) / (\gamma + t^m)}
 }
 \examples{
 growth <- mmf(0:10, 10, 0.5, 4, 1)
 # Calculate inverse function
 time <- mmf.inverse(growth, 10, 0.5, 4, 1)
 }
+\author{
+Daniel Rodriguez Perez
+}
 \references{
-  A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear
-  growth models for modeling oil palm yield growth,"
-  Journal of Mathematics and Statistics, vol. 1, no. 3, p.
-  225, 2005.
+A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear growth
+models for modeling oil palm yield growth," Journal of
+Mathematics and Statistics, vol. 1, no. 3, p. 225, 2005.
 }
 

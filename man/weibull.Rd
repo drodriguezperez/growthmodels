@@ -3,9 +3,9 @@
 \alias{weibull.inverse}
 \title{Weibull growth model}
 \usage{
-  weibull(t, alpha, beta, k, m)
+weibull(t, alpha, beta, k, m)
 
-  weibull.inverse(x, alpha, beta, k, m)
+weibull.inverse(x, alpha, beta, k, m)
 }
 \arguments{
   \item{t}{time}
@@ -21,19 +21,21 @@
   \item{m}{slope of growth}
 }
 \description{
-  Computes the Weibull growth model \deqn{ y(t) = \alpha -
-  \beta exp(-k * t^m) }{ y(t) = \alpha - \beta * exp(-k *
-  t^m) }
+Computes the Weibull growth model \deqn{ y(t) = \alpha -
+\beta exp(-k * t^m) }{ y(t) = \alpha - \beta * exp(-k *
+t^m) }
 }
 \examples{
 growth <- weibull(0:10, 10, 0.5, 0.3, 0.5)
 # Calculate inverse function
 time <- weibull.inverse(growth, 10, 0.5, 0.3, 0.5)
 }
+\author{
+Daniel Rodriguez Perez
+}
 \references{
-  D. Fekedulegn, M. Mac Siurtain, and J. Colbert,
-  "Parameter estimation of nonlinear growth models in
-  forestry," Silva Fennica, vol. 33, no. 4, pp. 327-336,
-  1999.
+D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter
+estimation of nonlinear growth models in forestry," Silva
+Fennica, vol. 33, no. 4, pp. 327-336, 1999.
 }
 

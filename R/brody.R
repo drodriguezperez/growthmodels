@@ -41,6 +41,8 @@
 #' their relationships with weaning weight in Angus cattle.," Journal of
 #' Animal Science, vol. 78, no. 6, pp. 1436-1442, May 2000.
 #' 
+#' @author Daniel Rodriguez Perez
+#' 
 #' @rdname brody
 #' @export brody
 #' @aliases brody

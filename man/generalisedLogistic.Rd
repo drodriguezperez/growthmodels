@@ -3,9 +3,9 @@
 \alias{generalisedLogistic.inverse}
 \title{Generalised Logistic growth model}
 \usage{
-  generalisedLogistic(t, A, U, k, beta, t0)
+generalisedLogistic(t, A, U, k, beta, t0)
 
-  generalisedLogistic.inverse(x, A, U, k, beta, t0 = 0)
+generalisedLogistic.inverse(x, A, U, k, beta, t0 = 0)
 }
 \arguments{
   \item{t}{time}
@@ -23,16 +23,19 @@
   \item{t0}{time shift (default 0)}
 }
 \description{
-  Computes the Generalised Logistic growth model \deqn{
-  y(t) = A + \frac{U - A}{1 + \beta exp(-k (t- t_0))}}{
-  y(t) = A + (U - A)/(1 + \beta * exp(-k * (t- t_0)))}
+Computes the Generalised Logistic growth model \deqn{ y(t)
+= A + \frac{U - A}{1 + \beta exp(-k (t- t_0))}}{ y(t) = A +
+(U - A)/(1 + \beta * exp(-k * (t- t_0)))}
 }
 \examples{
 growth <- generalisedLogistic(0:10, 5, 10, 0.3, 0.5, 3)
 # Calculate inverse function
 time <- generalisedLogistic.inverse(growth, 5, 10, 0.3, 0.5, 3)
 }
+\author{
+Daniel Rodriguez Perez
+}
 \references{
-  http://en.wikipedia.org/wiki/Generalised_logistic_function
+http://en.wikipedia.org/wiki/Generalised_logistic_function
 }
 

@@ -1,11 +1,13 @@
 \name{mitcherlich}
 \alias{mitcherlich}
 \alias{mitcherlich.inverse}
+\alias{mitscherlich}
+\alias{mitscherlich.inverse}
 \title{Mitcherlich growth model}
 \usage{
-  mitcherlich(t, alpha, beta, k)
+mitcherlich(t, alpha, beta, k)
 
-  mitcherlich.inverse(x, alpha, beta, k)
+mitcherlich.inverse(x, alpha, beta, k)
 }
 \arguments{
   \item{t}{time}
@@ -19,18 +21,20 @@
   \item{k}{growth rate}
 }
 \description{
-  Computes the Mitcherlich growth model \deqn{ y(t) =
-  (\alpha - \beta k^t)}{ y(t) = \alpha - \beta * k^t}
+Computes the Mitcherlich growth model \deqn{ y(t) = (\alpha
+- \beta k^t)}{ y(t) = \alpha - \beta * k^t}
 }
 \examples{
 growth <- mitcherlich(0:10, 10, 0.5, 0.3)
 # Calculate inverse function
 time <- mitcherlich.inverse(growth, 10, 0.5, 0.3)
 }
+\author{
+Daniel Rodriguez Perez
+}
 \references{
-  D. Fekedulegn, M. Mac Siurtain, and J. Colbert,
-  "Parameter estimation of nonlinear growth models in
-  forestry," Silva Fennica, vol. 33, no. 4, pp. 327-336,
-  1999.
+D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter
+estimation of nonlinear growth models in forestry," Silva
+Fennica, vol. 33, no. 4, pp. 327-336, 1999.
 }
 

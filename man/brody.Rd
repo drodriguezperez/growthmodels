@@ -3,9 +3,9 @@
 \alias{brody.inverse}
 \title{Brody growth model}
 \usage{
-  brody(t, alpha, w0, k)
+brody(t, alpha, w0, k)
 
-  brody.inverse(x, alpha, w0, k)
+brody.inverse(x, alpha, w0, k)
 }
 \arguments{
   \item{t}{time}
@@ -19,20 +19,23 @@
   \item{k}{growth rate}
 }
 \description{
-  Computes the Brody growth model and its inverse \deqn{
-  y(t) = \alpha - (\alpha - w_0) exp(- k t) }{ y(t) =
-  \alpha - (\alpha - w_0) * exp(- k * t) }
+Computes the Brody growth model and its inverse \deqn{ y(t)
+= \alpha - (\alpha - w_0) exp(- k t) }{ y(t) = \alpha -
+(\alpha - w_0) * exp(- k * t) }
 }
 \examples{
 growth <- brody(0:10, 10, 5, 0.3)
 # Calculate inverse function
 time <- brody.inverse(growth, 10, 5, 0.3)
 }
+\author{
+Daniel Rodriguez Perez
+}
 \references{
-  M. M. Kaps, W. O. W. Herring, and W. R. W. Lamberson,
-  "Genetic and environmental parameters for traits derived
-  from the Brody growth curve and their relationships with
-  weaning weight in Angus cattle.," Journal of Animal
-  Science, vol. 78, no. 6, pp. 1436-1442, May 2000.
+M. M. Kaps, W. O. W. Herring, and W. R. W. Lamberson,
+"Genetic and environmental parameters for traits derived
+from the Brody growth curve and their relationships with
+weaning weight in Angus cattle.," Journal of Animal
+Science, vol. 78, no. 6, pp. 1436-1442, May 2000.
 }
 

@@ -40,6 +40,8 @@
 #' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
 #' 327-336, 1999.
 #' 
+#' @author Daniel Rodriguez Perez
+#' 
 #' @rdname logistic
 #' @export logistic
 #' @aliases logistic
@@ -80,6 +82,8 @@ logistic.inverse <- function(x, alpha, beta, k) {
 #' 
 #' @examples
 #' growth <- generalisedLogistic(0:10, 5, 10, 0.3, 0.5, 3)
+#' 
+#' @author Daniel Rodriguez Perez
 #' 
 #' @rdname generalisedLogistic
 #' @export generalisedLogistic

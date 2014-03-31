@@ -9,20 +9,5 @@ Description: A compilation of nonlinear growth models used in many areas
 License: GPL-3
 URL: https://github.com/drodriguezperez/growthmodels
 BugReports: https://github.com/drodriguezperez/growthmodels/issues
-Collate:
-    'negativeExponential.R'
-    'monomolecular.R'
-    'mitcherlich.R'
-    'gompertz.R'
-    'logistic.R'
-    'chapmanRichards.R'
-    'richard.R'
-    'vonBertalanffy.R'
-    'weibull.R'
-    'loglogistic.R'
-    'mmf.R'
-    'schnute.R'
-    'stannard.R'
-    'brody.R'
-    'growthmodels.R'
-    'blumberg.R'
+Suggests:
+    testthat

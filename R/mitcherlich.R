@@ -40,22 +40,28 @@
 #' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
 #' 327-336, 1999.
 #' 
+#' @author Daniel Rodriguez Perez
+#' 
 #' @rdname mitcherlich
-#' @export mitcherlich
-#' @aliases mitcherlich
+#' @export mitcherlich mitscherlich
+#' @aliases mitcherlich mitscherlich
 mitcherlich <- function(t, alpha, beta, k) {
   result <- alpha - beta * k^t
   return(result)
 }
+
+mitscherlich <- mitcherlich
 
 #' @examples
 #' # Calculate inverse function
 #' time <- mitcherlich.inverse(growth, 10, 0.5, 0.3)
 #' 
 #' @rdname mitcherlich
-#' @export mitcherlich.inverse
-#' @aliases mitcherlich.inverse
+#' @export mitcherlich.inverse mitscherlich.inverse
+#' @aliases mitcherlich.inverse mitscherlich.inverse
 mitcherlich.inverse <- function(x, alpha, beta, k) {
   result <- log((alpha - x) / beta) / log(k)
   return(result)
 }
+
+mitscherlich.inverse <- mitcherlich.inverse
