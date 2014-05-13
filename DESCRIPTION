@@ -11,3 +11,4 @@ URL: https://github.com/drodriguezperez/growthmodels
 BugReports: https://github.com/drodriguezperez/growthmodels/issues
 Suggests:
     testthat
+Roxygen: list(wrap = FALSE)
