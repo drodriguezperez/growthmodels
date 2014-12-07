@@ -5,7 +5,7 @@ Version: 1.2.0
 Date: 2013-11-23
 Author: Daniel Rodriguez Perez
 Maintainer: Daniel Rodriguez Perez <daniel.rodriguez.perez@gmail.com>
-Description: A compilation of nonlinear growth models used in many areas
+Description: A compilation of nonlinear growth models
 License: GPL-3
 URL: https://github.com/drodriguezperez/growthmodels
 BugReports: https://github.com/drodriguezperez/growthmodels/issues
