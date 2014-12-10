@@ -31,7 +31,7 @@ growth <- chapmanRichards(0:10, 10, 0.5, 0.3, 0.5)
 time <- chapmanRichards.inverse(growth, 10, 0.5, 0.3, 0.5)
 }
 \author{
-Daniel Rodriguez Perez
+Daniel Rodriguez
 }
 \references{
 D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of

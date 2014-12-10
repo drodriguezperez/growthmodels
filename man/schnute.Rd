@@ -31,7 +31,7 @@ growth <- schnute(0:10, 10, 5, .5, .5)
 time <- schnute.inverse(growth, 10, 5, .5, .5)
 }
 \author{
-Daniel Rodriguez Perez
+Daniel Rodriguez
 }
 \references{
 A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear growth models for

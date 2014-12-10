@@ -31,7 +31,7 @@ growth <- mmf(0:10, 10, 0.5, 4, 1)
 time <- mmf.inverse(growth, 10, 0.5, 4, 1)
 }
 \author{
-Daniel Rodriguez Perez
+Daniel Rodriguez
 }
 \references{
 A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear growth models for

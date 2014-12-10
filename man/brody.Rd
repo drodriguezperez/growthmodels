@@ -29,7 +29,7 @@ growth <- brody(0:10, 10, 5, 0.3)
 time <- brody.inverse(growth, 10, 5, 0.3)
 }
 \author{
-Daniel Rodriguez Perez
+Daniel Rodriguez
 }
 \references{
 M. M. Kaps, W. O. W. Herring, and W. R. W. Lamberson, "Genetic and

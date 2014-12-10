@@ -15,7 +15,7 @@ A compilation of nonlinear growth models used in many areas.
 }
 }
 \author{
-Daniel Rodriguez Perez \email{daniel.rodriguez.perez@gmail.com}
+Daniel Rodriguez \email{daniel.rodriguez.perez@gmail.com}
 }
 \references{
 D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of

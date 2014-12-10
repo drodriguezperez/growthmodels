@@ -40,7 +40,7 @@
 #' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
 #' 327-336, 1999.
 #' 
-#' @author Daniel Rodriguez Perez
+#' @author Daniel Rodriguez
 #' 
 #' @rdname gompertz
 #' @export gompertz

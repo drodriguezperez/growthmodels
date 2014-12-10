@@ -34,7 +34,7 @@ growth <- generalisedRichard(0:10, 5, 10, 0.3, 0.5, 1, 3)
 time <- generalisedRichard.inverse(growth, 5, 10, 0.3, 0.5, 1, 3)
 }
 \author{
-Daniel Rodriguez Perez
+Daniel Rodriguez
 }
 \references{
 http://en.wikipedia.org/wiki/Generalised_logistic_function

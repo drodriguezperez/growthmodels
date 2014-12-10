@@ -31,7 +31,7 @@ growth <- blumberg(0:10, 10, 2, 0.5)
 time <- blumberg.inverse(growth, 12, 2, 0.5)
 }
 \author{
-Daniel Rodriguez Perez
+Daniel Rodriguez
 }
 \references{
 A. Tsoularis and J. Wallace, "Analysis of logistic growth models.,"

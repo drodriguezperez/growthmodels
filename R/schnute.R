@@ -41,7 +41,7 @@
 #' modeling oil palm yield growth," Journal of Mathematics and Statistics,
 #' vol. 1, no. 3, p. 225, 2005.
 #' 
-#' @author Daniel Rodriguez Perez
+#' @author Daniel Rodriguez
 #' 
 #' @rdname schnute
 #' @export schnute

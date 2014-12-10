@@ -28,6 +28,9 @@ growth <- loglogistic(0:10, 10, 0.5, 0.3)
 # Calculate inverse function
 time <- loglogistic.inverse(growth, 10, 0.5, 0.3)
 }
+\author{
+Daniel Rodriguez
+}
 \references{
 A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear growth models for
 modeling oil palm yield growth," Journal of Mathematics and Statistics,

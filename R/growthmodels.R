@@ -8,7 +8,7 @@
 #'   License: \tab GPL-3 \cr
 #' }
 #'
-#' @author Daniel Rodriguez Perez \email{daniel.rodriguez.perez@@gmail.com}
+#' @author Daniel Rodriguez \email{daniel.rodriguez.perez@@gmail.com}
 #' 
 #' @references
 #' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of

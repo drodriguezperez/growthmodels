@@ -31,7 +31,7 @@ growth <- stannard(0:10, 1, .2, .1, .5)
 time <- stannard.inverse(growth, 1, .2, .1, .5)
 }
 \author{
-Daniel Rodriguez Perez
+Daniel Rodriguez
 }
 \references{
 A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear growth models for

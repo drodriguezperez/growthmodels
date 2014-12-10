@@ -31,7 +31,7 @@ growth <- mitcherlich(0:10, 10, 0.5, 0.3)
 time <- mitcherlich.inverse(growth, 10, 0.5, 0.3)
 }
 \author{
-Daniel Rodriguez Perez
+Daniel Rodriguez
 }
 \references{
 D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
