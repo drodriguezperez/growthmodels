@@ -1,9 +1,7 @@
 # growthmodels: Nonlinear Growth Models
-
 `growthmodels` is a `R` package that contains a compilation of nonlinear growth models used in many areas.
 
 ## Installation
-
 To install the stable version of `growthmodels` from CRAN, simply run the following from an R console:
 
 ```
@@ -18,7 +16,6 @@ install_github('growthmodels', 'drodriguezperez')
 ```
 
 ## Features
-
 `growthmodels` includes functions for the calculation of the following nonlinear growth models and its inverse functions:
 
 * Blumberg
@@ -27,6 +24,7 @@ install_github('growthmodels', 'drodriguezperez')
 * Generalised Logistic
 * Generalised Richard
 * Gompertz
+* Janoschek
 * Log-logistic
 * Logistic
 * Mitcherlich
@@ -40,11 +38,9 @@ install_github('growthmodels', 'drodriguezperez')
 * Weibull
 
 ## License
-
 [GNU General Public License, version 3](http://www.gnu.org/licenses/gpl-3.0.txt)
 
 ## References
-
 1. D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
    nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
    327-336, 1999. [Full text](http://www.metla.fi/silvafennica/full/sf33/sf334327.pdf)
@@ -60,8 +56,9 @@ install_github('growthmodels', 'drodriguezperez')
    modeling oil palm yield growth," Journal of Mathematics and Statistics,
    vol. 1, no. 3, p. 225, 2005. DOI identifier:
    [10.3844/jmssp.2005.225.233](http://dx.doi.org/10.3844/jmssp.2005.225.233)
-5. [Generalised logistic function](http://en.wikipedia.org/wiki/Generalised_logistic_functi5on)
+5. Michael J. Panik, "Growth Curve Modeling: Theory and Applications",
+   John Wiley & Sons, December 2013.
+6. [Generalised logistic function](http://en.wikipedia.org/wiki/Generalised_logistic_functi5on)
 
 # Acknowledgments
-
 I would like to thank J.A. Martinez for all of their helpful discussions during the develop of the package.

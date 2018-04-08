@@ -1,5 +1,7 @@
 growthmodels 1.3.0
 --------------------------------------------------------------------------------
+* This version includes new nonlinear growth models:
+  Janoschek
 * `mitscherlich` alias to the `mitcherlich` function
 
 growthmodels 1.2.0
