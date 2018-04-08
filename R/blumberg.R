@@ -38,6 +38,8 @@
 #' A. Tsoularis and J. Wallace, "Analysis of logistic growth models.,"
 #' Math Biosci, vol. 179, no. 1, pp. 21-55, Jul. 2002.
 #' 
+#' @author Daniel Rodriguez
+#' 
 #' @rdname blumberg
 #' @export blumberg
 #' @aliases blumberg

@@ -1,6 +1,6 @@
 #' growthmodels: Nonlinear Growth Models
 #'
-#' A compilation of nonlinear growth models used in many areas.
+#' A compilation of nonlinear growth models.
 #' 
 #' \tabular{ll}{
 #'   Package: \tab growthmodels \cr
@@ -8,7 +8,7 @@
 #'   License: \tab GPL-3 \cr
 #' }
 #'
-#' @author Daniel Rodriguez Perez \email{daniel.rodriguez.perez@@gmail.com}
+#' @author Daniel Rodriguez \email{daniel.rodriguez.perez@@gmail.com}
 #' 
 #' @references
 #' D. Fekedulegn, M. Mac Siurtain, and J. Colbert, "Parameter estimation of
@@ -26,6 +26,9 @@
 #' A. Khamiz, Z. Ismail, and A. T. Muhammad, "Nonlinear growth models for
 #' modeling oil palm yield growth," Journal of Mathematics and Statistics,
 #' vol. 1, no. 3, p. 225, 2005.
+#' 
+#' Michael J. Panik, "Growth Curve Modeling: Theory and Applications",
+#' John Wiley & Sons, December 2013.
 #' 
 #' http://en.wikipedia.org/wiki/Generalised_logistic_function
 #' 

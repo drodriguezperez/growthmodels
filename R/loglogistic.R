@@ -40,6 +40,8 @@
 #' modeling oil palm yield growth," Journal of Mathematics and Statistics,
 #' vol. 1, no. 3, p. 225, 2005.
 #' 
+#' @author Daniel Rodriguez
+#' 
 #' @rdname loglogistic
 #' @export loglogistic
 #' @aliases loglogistic

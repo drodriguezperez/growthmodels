@@ -41,6 +41,8 @@
 #' nonlinear growth models in forestry," Silva Fennica, vol. 33, no. 4, pp.
 #' 327-336, 1999.
 #' 
+#' @author Daniel Rodriguez
+#' 
 #' @rdname richard
 #' @export richard
 #' @aliases richard
@@ -82,6 +84,8 @@ richard.inverse <- function(x, alpha, beta, k, m){
 #' 
 #' @references
 #' http://en.wikipedia.org/wiki/Generalised_logistic_function
+#' 
+#' @author Daniel Rodriguez
 #' 
 #' @rdname generalisedRichard
 #' @export generalisedRichard
