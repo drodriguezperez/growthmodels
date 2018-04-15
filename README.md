@@ -58,7 +58,7 @@ install_github('growthmodels', 'drodriguezperez')
    [10.3844/jmssp.2005.225.233](http://dx.doi.org/10.3844/jmssp.2005.225.233)
 5. Michael J. Panik, "Growth Curve Modeling: Theory and Applications",
    John Wiley & Sons, December 2013.
-6. [Generalised logistic function](http://en.wikipedia.org/wiki/Generalised_logistic_functi5on)
+6. Wikipedia contributors, "Generalised logistic function", Wikipedia, The Free Encyclopedia, 6 April 2018, 16:27 UTC, [accessed 15 August 2004](https://en.wikipedia.org/w/index.php?title=Generalised_logistic_function&oldid=835109590)
 
 # Acknowledgments
 I would like to thank J.A. Martinez for all of their helpful discussions during the develop of the package.
