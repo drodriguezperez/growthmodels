@@ -32,6 +32,7 @@ install_github('growthmodels', 'drodriguezperez')
 * Morgan -Mercer-Flodin
 * Negative exponential
 * Richard’s
+* Rosso
 * Schnute
 * Stannard
 * von Bertalanffy
@@ -58,7 +59,9 @@ install_github('growthmodels', 'drodriguezperez')
    [10.3844/jmssp.2005.225.233](http://dx.doi.org/10.3844/jmssp.2005.225.233)
 5. Michael J. Panik, "Growth Curve Modeling: Theory and Applications",
    John Wiley & Sons, December 2013.
-6. Wikipedia contributors, "Generalised logistic function", Wikipedia, The Free Encyclopedia, 6 April 2018, 16:27 UTC, [accessed 15 August 2004](https://en.wikipedia.org/w/index.php?title=Generalised_logistic_function&oldid=835109590)
+6. T. Ross, "Indices for performance evaluation of predictive models in food
+   microbiology." J. Appl. Bacteriol. vol. 81, no. 5, pp. 501–508. Nov. 1996.
+7. Wikipedia contributors, "Generalised logistic function", Wikipedia, The Free Encyclopedia, 6 April 2018, 16:27 UTC, [accessed 15 August 2004](https://en.wikipedia.org/w/index.php?title=Generalised_logistic_function&oldid=835109590)
 
 # Acknowledgments
 I would like to thank J.A. Martinez for all of their helpful discussions during the develop of the package.
